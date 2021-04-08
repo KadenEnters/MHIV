@@ -9,17 +9,14 @@ let config = {
     measurementId: "G-JM7RJY6625"
 };
 firebase.initializeApp(config);
-let db = firebase.firestore();
-let clientsRef = db.collection("clients");
+db = firebase.firestore();
+var clientsRef = db.collection("clients");
 clientsRef.get().then((querySnapshot) => {
-    LoadTable(querySnapshot);
-    querySnapshot.forEach((doc) => {
-        console.log(doc.id, " => ", doc.data());
-    })
-
+    console.log("Loaded Clients")
 });
 function init() {
-    $('#grab').on('click', searchClient)
+    $('#upload').on('click', addClient);
+    $('#search').on('click', searchClient())
 }
 function LoadTable(querySnapshot) {
     var tableRow='';
@@ -39,7 +36,34 @@ function LoadTable(querySnapshot) {
     });
     $('#tbody').html(tableRow);
 }
+function addClient() {
+    let fName = $('#fname').val();
+    let lName = $('#lname').val();
+    let address = $('#address').val();
+    let city = $('#city').val();
+    let state = $('#state').val();
+    let zip = $('#zip').val();
+    let gender = $('#gender').val();
+    let birthday = $('#birthday').val();
+    clientsRef.add({
+        FirstName: fName,
+        LastName: lName,
+        Address: address,
+        City: city,
+        State: state,
+        ZipCode: zip,
+        Gender: gender,
+        Birthday: birthday
+    }).then(function(docRef) {
+        console.log("Document written with ID: ", docRef.id);
+    })
+        .catch(function(error) {
+            console.error("Error adding document: ", error);
+        });
+
+}
 function searchClient() {
+    console.log("test")
     let lName = $('#lastName').val();
     clientsRef.where("LastName", "==", lName)
         .get()

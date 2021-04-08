@@ -5,8 +5,8 @@
         <title>Intake2</title>
         <link href="stylesheet.css" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
         <script src="javascript.js"></script>
     </head>
     <nav>
@@ -21,14 +21,13 @@
         <div id="form">
             <form>
                 <label for="myLname">*Last Name:</label>
-                <input type="text" id="mylastname" name="myLname" required="required">
+                <input type="text" id="lname" name="myLname" required="required">
 
                 <label for="myFname">*First Name:</label>
-                <input type="text" id="myFname" name="myFname" required="required">
+                <input type="text" id="fname" name="myFname" required="required">
 
                 <label for="address">*Address:</label>
                 <input type="text" id="address" name="address">
-
 
                 <label for="city">*City:</label>
                 <input type="text" id="city" name="city">
@@ -37,13 +36,13 @@
                 <input type="text" id="state" name="state" required="required">
 
                 <label for="zip">Zip:</label>
-                <input type="text" id="Zip" name="Zip" maxlength="6">
+                <input type="text" id="zip" name="Zip" maxlength="6">
 
                 <label for="gender">Gender:</label>
                 <input type="text" id="gender" name="gender">
 
                 <label for="birth">Birthday:</label>
-                <input type="text" id="birth" name="birth" min="1" max="14">
+                <input type="text" id="birthday" name="birth" min="1" max="14">
 
                 <label for="N/A">N/A:</label>
                 <input type="text" id="N/A2" name="N/A" required="required">
@@ -56,7 +55,7 @@
 
                 <label for="myComments">Comments:</label>
                 <textarea id="myComments" name="myComments" rows="2" cols="30" required="required"></textarea>
-                <input type="button"  value="Save">
+                <input type="button" id="upload" value="Save">
             </form>
         </div>
     </body>
