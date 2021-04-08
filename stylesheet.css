@@ -1,3 +1,4 @@
+ HEAD
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
@@ -26,6 +27,10 @@ nav{
     color:green;
 }
 
+form{
+
+    
+}
 
 
 
@@ -36,4 +41,4 @@ nav{
 
 
 
-/*<link href="stylesheet.css" rel="stylesheet">/*
+
