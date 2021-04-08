@@ -22,7 +22,8 @@ form {
     grid-template-rows: auto;
 }
 nav{
-color:green
+    background-color:blue;
+    color:green;
 }
 
 
