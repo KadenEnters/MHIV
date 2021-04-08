@@ -1,5 +1,5 @@
 *{
-    
+    padding:.5em;
 }
 table, th, td {
     border: 1px solid black;
@@ -38,6 +38,7 @@ nav a {
 nav a:link { color: #0aa500; }
 nav a:visited { color: #ff0000; }
 nav a:hover { color: #0061ff; }
+
 
 
 
