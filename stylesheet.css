@@ -40,6 +40,12 @@ nav a:link { color: #0aa500; }
 nav a:visited { color: #ff0000; }
 nav a:hover { color: #0061ff; }
 
+#info_table {
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+
 
 
 
