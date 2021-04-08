@@ -1,3 +1,6 @@
+*{
+    
+}
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
@@ -30,12 +33,11 @@ nav {
 }
 nav a {
     text-decoration: none;
-    transition: color 3s ease-out;
 
 }
 nav a:link { color: #0aa500; }
 nav a:visited { color: #ff0000; }
-nav a:hover { color: #d700ff; }
+nav a:hover { color: #0061ff; }
 
 
 
