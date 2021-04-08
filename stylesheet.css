@@ -20,7 +20,10 @@ form {
     grid-gap: 1em; gap: 1em;
     grid-template-columns: 6em 1fr;
     grid-template-rows: auto;
-
+}
+nav{
+color:green
+}
 
 
 
