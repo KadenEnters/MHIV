@@ -1,3 +1,6 @@
+*{
+    
+}
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
@@ -21,12 +24,20 @@ form {
     grid-template-columns: 6em 1fr;
     grid-template-rows: auto;
 }
-nav{
-    background-color:blue;
-    color:green;
+nav {
+    font-weight: bold;
+    font-size: 120%;
+    padding: 1.5em;
+    margin-top: 0;
+    text-align: center;
 }
+nav a {
+    text-decoration: none;
 
-
+}
+nav a:link { color: #0aa500; }
+nav a:visited { color: #ff0000; }
+nav a:hover { color: #0061ff; }
 
 
 
