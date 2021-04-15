@@ -64,7 +64,9 @@
 <head>
     <meta charset="UTF-8">
     <title>INTAKE FORM</title>
-   <link href="stylesheet.css" rel="stylesheet">
+
+    <link href="stylesheet.css" rel="stylesheet">
+
     <link href="stylesheet.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
@@ -72,12 +74,12 @@
     <script src="javascript.js"></script>
 </head>
 <nav>
-        <a href="index.html">Home</a>
-        <a href="Intake.html">Intake</a>
-        <a href="Intake2.html">Intake 2</a>
-        <a href="Report.html">Report</a>
-        <a href="Visit.html">Visit</a>
-        <a href="Visit2.html">Visit 2</a>
+    <a href="index.html">Home</a>
+    <a href="Intake.html">Intake</a>
+    <a href="Intake2.html">Intake 2</a>
+    <a href="Report.html">Report</a>
+    <a href="Visit.html">Visit</a>
+    <a href="Visit2.html">Visit 2</a>
 </nav>
 <body>
 <header>
@@ -88,8 +90,10 @@
     </div>
 </header>
 <div id="form">
-<form>
-    <h4>Basic Information</h4><br>
+
+    <form>
+        <h4>Basic Information</h4><br>
+
         <label for="Last Name">Last Name:</label>
         <input type="text" id="Last Name" name="Last Name" required="required">
 
@@ -120,7 +124,8 @@
         <input type="text" id="Phone#" name="Phone#" maxlength="10">
 
         <label for="Email">Email Address:</label>
-        <input type="text" id="Email" name="Email">
+
+        <input type="email" id="Email" name="Email">
 
         <label for="Gender">Gender</label>
         <select id="Gender" name="Gender" value="Gender" required="required">
@@ -130,7 +135,9 @@
         </select>
 
         <label for="Birthday">Birthday:</label>
-        <input type="text" id="Birthday" name="birth" min="1" max="14" required="required">
+
+        <input type="date" id="Birthday" name="Birthday" required="required" min="1900-01-01" max="2100-01-01">
+
 
         <label for="4SS#">Last 4# of SS:</label>
         <input type="text" id="4SS#" name="4SS#" required="required">
@@ -163,7 +170,9 @@
         </select>
 
         <label for="Time of Service">Time of Service:</label>
-        <textarea id="Time of Service" name="Time of Service"></textarea>
+
+        <textarea id="Time of Service" name="Time of Service" required="required"></textarea>
+
 
         <label for="VA Benefits?">Are you eligible for VA Benefits</label>
         <select id="VA Benefits?" name="VA Benefits?" value="VA Benefits?" required="required">
@@ -177,11 +186,13 @@
             <option value="VA Card">VA Card</option>
             <option value="Other">Other</option>
         </select>
-    <h4>Employment</h4><br>
-    to be added
 
-    <br><input type="button"  value="Save">
-</form>
+        <h4>Employment</h4><br>
+        to be added
+
+        <br><input type="submit"  value="Save">
+    </form>
+
 
 </div>
 
