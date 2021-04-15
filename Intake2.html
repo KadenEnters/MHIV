@@ -18,64 +18,19 @@
             <a href="Visit.html">Visit</a>
             <a href="Visit2.html">Visit 2</a>
     </nav>
-    <body>
-        <div id="form">
-            <form>
-                <label for="myLname">*Last Name:</label>
-                <input type="text" id="lname" name="myLname" required="required">
 
-                <label for="myFname">*First Name:</label>
-                <input type="text" id="fname" name="myFname" required="required">
-
-                <label for="address">*Address:</label>
-                <input type="text" id="address" name="address">
-
-                <label for="city">*City:</label>
-                <input type="text" id="city" name="city">
-
-                <label for="state">*State:</label>
-                <input type="text" id="state" name="state" required="required">
-
-                <label for="zip">Zip:</label>
-                <input type="text" id="zip" name="Zip" maxlength="6">
-
-                <label for="gender">Gender:</label>
-                <input type="text" id="gender" name="gender">
-
-                <label for="birth">Birthday:</label>
-                <input type="text" id="birthday" name="birth" min="1" max="14">
-
-                <label for="N/A">N/A:</label>
-                <input type="text" id="N/A2" name="N/A" required="required">
-
-                <label for="N/A">N/A:</label>
-                <input type="text" id="myLname" name="N/A" required="required">
-
-                <label for="N/A">N/A:</label>
-                <input type="text" id="N/A" name="N/A" required="required">
-
-                <label for="myComments">Comments:</label>
-                <textarea id="myComments" name="myComments" rows="2" cols="30" required="required"></textarea>
-                <input type="button" id="upload" value="Save">
-            </form>
-        </div>
-    </body>
-
-<head>
-    <meta charset="UTF-8">
-    <title>INTAKE FORM</title>
-
-    <link href="stylesheet.css" rel="stylesheet">
+            <form/>
+                <h4>Basic Information</h4><br>
 
     <link href="stylesheet.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
     <script src="javascript.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
 </head>
 <nav>
-    <a href="index.html">Home</a>
     <a href="Intake.html">Intake</a>
+    <a href="index.html">Home</a>
     <a href="Intake2.html">Intake 2</a>
     <a href="Report.html">Report</a>
     <a href="Visit.html">Visit</a>
@@ -91,110 +46,100 @@
 </header>
 <div id="form">
 
-    <form>
-        <h4>Basic Information</h4><br>
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname" name="Last Name" required="required">
 
-        <label for="Last Name">Last Name:</label>
-        <input type="text" id="Last Name" name="Last Name" required="required">
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" >
 
-        <label for="First Name">First Name:</label>
-        <input type="text" id="First Name" name="First Name" required="required">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required="required">
 
-        <label for="address">Address:</label>
-        <input type="text" id="address" name="address" >
+                <label for="state">State:</label>
+                <input type="text" id="state" name="State" required="required">
 
-        <label for="city">City:</label>
-        <input type="text" id="city" name="city" required="required">
+                <label for="zipcode">Zip Code:</label>
+                <input type="text" id="zipcode" name="Zip" maxlength="6">
 
-        <label for="State">State:</label>
-        <input type="text" id="State" name="State" required="required">
+                <label for="IsHomeless">Are you homeless?</label>
+                <select id="IsHomeless" name="IsHomeless?" value="IsHomeless?" required="required">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+                <label for="location">--If yes, where are you staying?:</label>
+                <input type="text" id="location" name="Location">
 
-        <label for="Zip">Zip Code:</label>
-        <input type="text" id="Zip" name="Zip" maxlength="6">
+                <label for="phonenumber">Phone#:</label>
+                <input type="text" id="phonenumber" name="Phone#" maxlength="10">
 
-        <label for="IsHomeless?">Are you homeless?</label>
-        <select id="IsHomeless?" name="IsHomeless?" value="IsHomeless?" required="required">
-            <option value="Yes">Yes</option>
-            <option value="No">No</option>
-        </select>
-        <label for="Location">--If yes, where are you staying?:</label>
-        <input type="text" id="Location" name="Location">
+                <label for="email">Email Address:</label>
 
-        <label for="Phone#">Phone#:</label>
-        <input type="text" id="Phone#" name="Phone#" maxlength="10">
+                <input type="email" id="email" name="Email">
 
-        <label for="Email">Email Address:</label>
+                <label for="gender">Gender</label>
+                <select id="gender" name="Gender" value="Gender" required="required">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
 
-        <input type="email" id="Email" name="Email">
+                <label for="birthday">Birthday:</label>
 
-        <label for="Gender">Gender</label>
-        <select id="Gender" name="Gender" value="Gender" required="required">
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-            <option value="Other">Other</option>
-        </select>
-
-        <label for="Birthday">Birthday:</label>
-
-        <input type="date" id="Birthday" name="Birthday" required="required" min="1900-01-01" max="2100-01-01">
+                <input type="date" id="birthday" name="Birthday" required="required" min="1900-01-01" max="2100-01-01">
 
 
-        <label for="4SS#">Last 4# of SS:</label>
-        <input type="text" id="4SS#" name="4SS#" required="required">
+                <label for="ssn">Last 4# of SS:</label>
+                <input type="text" id="ssn" name="4SS#" required="required">
 
-        <label for="Race">Race</label>
-        <select id="Race" name="Race" value="Race" required="required">
-            <option value="Asian">Asian</option>
-            <option value="African American">African American</option>
-            <option value="White">White</option>
-            <option value="Native Hawaiian/Pacific Islander">Native Hawaiian/Pacific Islander</option>
-            <option value="American Indian/Alaska Native">American Indian/Alaska Native</option>
-            <option value="Other">Other</option>
-        </select>
+                <label for="race">Race</label>
+                <select id="race" name="Race" value="Race" required="required">
+                    <option value="Asian">Asian</option>
+                    <option value="African American">African American</option>
+                    <option value="White">White</option>
+                    <option value="Native Hawaiian/Pacific Islander">Native Hawaiian/Pacific Islander</option>
+                    <option value="American Indian/Alaska Native">American Indian/Alaska Native</option>
+                    <option value="Other">Other</option>
+                </select>
 
-        <label for="Income">Source of Income:</label>
-        <input type="text" id="Income" name="Income" required="required">
-        <label for="Income Amount">Amount of Income:</label>
-        <input type="text" id="Income Amount" name="Income Amount" required="required">
+                <label for="income">Source of Income:</label>
+                <input type="text" id="income" name="Income" required="required">
+                <label for="incomeAmount">Amount of Income:</label>
+                <input type="text" id="incomeAmount" name="Income Amount" required="required">
 
-        <h4>Military</h4><br>
+                <h4>Military</h4><br>
 
-        <label for="Branch">What branch of the military did you serve?</label>
-        <select id="Branch" name="Branch" value="Branch" required="required">
-            <option value="Army">Army</option>
-            <option value="Navy">Navy</option>
-            <option value="Air Force">Air Force</option>
-            <option value="Marines">Marines</option>
-            <option value="Coast Guard">Coast Guard</option>
-            <option value="Reserves/National Guard">Reserves/National Guard</option>
-        </select>
+                <label for="branch">What branch of the military did you serve?</label>
+                <select id="branch" name="Branch" value="Branch" required="required">
+                    <option value="Army">Army</option>
+                    <option value="Navy">Navy</option>
+                    <option value="Air Force">Air Force</option>
+                    <option value="Marines">Marines</option>
+                    <option value="Coast Guard">Coast Guard</option>
+                    <option value="Reserves/National Guard">Reserves/National Guard</option>
+                </select>
+
+                <label for="TimeofService">Time of Service:</label>
+
+                <textarea id="TimeofService" name="Time of Service" required="required"></textarea>
 
         <label for="Time of Service">Time of Service:</label>
 
         <textarea id="Time of Service" name="Time of Service" required="required"></textarea>
 
+                <label for="ServiceVerification">Millitary Service Verification</label>
+                <select id="ServiceVerification" name="Service Verification" value="Service Verification" required="required">
+                    <option value="DD214">DD214</option>
+                    <option value="VA Card">VA Card</option>
+                    <option value="Other">Other</option>
+                </select>
 
-        <label for="VA Benefits?">Are you eligible for VA Benefits</label>
-        <select id="VA Benefits?" name="VA Benefits?" value="VA Benefits?" required="required">
-            <option value="Yes">Yes</option>
-            <option value="No">No</option>
-        </select>
+                <h4>Employment</h4><br>
+                to be added
 
-        <label for="Service Verification">Millitary Service Verification</label>
-        <select id="Service Verification" name="Service Verification" value="Service Verification" required="required">
-            <option value="DD214">DD214</option>
-            <option value="VA Card">VA Card</option>
-            <option value="Other">Other</option>
-        </select>
-
-        <h4>Employment</h4><br>
-        to be added
-
-        <br><input type="submit"  value="Save">
-    </form>
+                <br><input type="submit"  value="Save">
+            </form>
 
 
-</div>
-
-</body>
+        </div>
+    </body>
 </html>
