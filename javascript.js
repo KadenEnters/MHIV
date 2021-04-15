@@ -39,12 +39,23 @@ function LoadTable(querySnapshot) {
 function addClient() {
     let fName = $('#fname').val();
     let lName = $('#lname').val();
-    let address = $('#address').val();
-    let city = $('#city').val();
-    let state = $('#state').val();
-    let zip = $('#zip').val();
-    let gender = $('#gender').val();
-    let birthday = $('#birthday').val();
+    let address =$('#address').val();
+    let city =$('#city').val();
+    let state =$('#state').val();
+    let zipcode =$('#zipcode').val();
+    let isHomeless =$('#IsHomeless').val();
+    let location =$('#location').val();
+    let phonenumber =$('#phonenumber').val();
+    let email =$('#email').val();
+    let gender =$('#gender').val();
+    let birthday =$('#birthday').val();
+    let ssn =$('#ssn').val();
+    let race =$('#race').val();
+    let income =$('#income').val();
+    let branch =$('#branch').val();
+    let timeofService =$('#TimeofService').val();
+    let vaBenefits =$('#VABenefits').val();
+    let serviceVerification = $('#ServiceVerification').val();
     clientsRef.add({
         FirstName: fName,
         LastName: lName,
