@@ -1,0 +1,38 @@
+Logo in Top Left Corner for all pages.
+Color Scheme: Greens and Blues
+	--Specific Hexcodes:
+	--Background: #dce3e2
+	--Main Text: #1d4374
+	--Headers 2 and 3: #487b38
+	--Text: #94ac84 or #84a47a
+Text on Index page is centerally aligned. 
+Navigation is locked to the top of the page, and seperated from the rest
+	--White background with slight shadow. 
+	--All nav options have a fade to color(#1d4374)
+	--Nav fades when not being interacted with. 
+	--When hovering, gains a blue box and the color of the text becomes white
+		--Boxes are all roughly the same size. 
+Other buttons not on the Nav are an emerald green. 
+
+
+JS Ids
+--
+    fname
+    lname
+    address
+    city
+    state
+    zipcode
+    IsHomeless?
+    location
+    phonenumber
+    email
+    gender
+    birthday
+    4dssn -- 4 last digits of ssn
+    race
+    income
+    branch
+    TimeofService
+    VABenefits?
+    ServiceVerification
