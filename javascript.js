@@ -71,3 +71,12 @@ function searchClient() {
             LoadTable(querySnapshot);
         });
 }
+
+let db = firebase.firestore();
+let clientsRef = db.collection("clients");
+clientsRef.get().then((querySnapshot) => {
+    LoadTable(querySnapshot);
+    querySnapshot.forEach((doc) => {
+        console.log(doc.id, " => ", doc.data());
+    })
+});
