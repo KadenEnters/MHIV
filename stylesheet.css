@@ -1,4 +1,11 @@
- HEAD
+
+body{
+    background-color: #dce3e2;
+    color: #1d4374;
+}
+*{
+    padding:.2em;
+}
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
@@ -21,24 +28,25 @@ form {
     grid-gap: 1em; gap: 1em;
     grid-template-columns: 6em 1fr;
     grid-template-rows: auto;
+    margin-left: 25%;
+    margin-right: 25%;
 }
-nav{
-    background-color:blue;
-    color:green;
+nav {
+    font-weight: bold;
+    font-size: 120%;
+    padding: 1.5em;
+    margin-top: 0;
+    text-align: center;
 }
+nav a {
+    text-decoration: none;
 
-form{
-
-    
 }
+nav a:link { color: #1d4374; }
+nav a:visited { color: #84a47a; }
+nav a:hover { transition: 0.3s; color: #1d4374; }
 
-
-
-
-
-
-
-
-
-
-
+#info_table {
+    margin-left: 25%;
+    margin-right: 25%;
+}
