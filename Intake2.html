@@ -29,6 +29,9 @@
 <div id="form">
     <form>
     <h4>Basic Information</h4><br>
+                <label for="CurrentDate">Current Date:</label>
+                <input type="date" id="CurrentDate" name="CurrentDate">
+
                 <label for="fname">First Name:</label>
                 <input type="text" id="fname" name="First Name" required="required">
 
@@ -92,7 +95,7 @@
                 <label for="incomeAmount">Amount of Income:</label>
                 <input type="text" id="incomeAmount" name="Income Amount" required="required">
 
-                <h4>Military</h4><br>
+    <h4>Military</h4><br>
 
                 <label for="branch">What branch of the military did you serve?</label>
                 <select id="branch" name="Branch" value="Branch" required="required">
@@ -105,12 +108,27 @@
                 </select>
 
                 <label for="TimeofService">Time of Service:</label>
+                <input type="text" id="TimeofService" name="Time of Service" required="required"></textarea>
 
-                <textarea id="TimeofService" name="Time of Service" required="required"></textarea>
+        <label for="ActiveDuty">Did you serve on active duty?</label>
+        <select id="ActiveDuty" name="ActiveDuty" value="ActiveDuty" required="required">
+            <option value="ActiveDutyYes">Yes</option>
+            <option value="ActiveDutyNo">No</option>
+        </select>
 
-        <label for="Time of Service">Time of Service:</label>
+        <label for="ActiveDutyTime">If yes, list dates:</label>
+        <input type="text" id="ActiveDutyTime" name="ActiveDuty"></input>
 
-        <textarea id="Time of Service" name="Time of Service" required="required"></textarea>
+        <label for="Discharge">Type of discharge:</label>
+        <select id="Discharge" name="Discharge" value="Discharge" required="required">
+            <option value="Honorable">Honorable</option>
+            <option value="UnderHonorable">UnderHonorable</option>
+            <option value="General">General</option>
+            <option value="Uncharacterized">Uncharacterized</option>
+            <option value="Dishonorable">Dishonorable</option>
+            <option value="Unsure">Unsure</option>
+        </select>
+
 
                 <label for="ServiceVerification">Millitary Service Verification</label>
                 <select id="ServiceVerification" name="Service Verification" value="Service Verification" required="required">
@@ -119,11 +137,128 @@
                     <option value="Other">Other</option>
                 </select>
 
-                <h4>Employment</h4><br>
-                to be added
+    <h4>Employment</h4><br>
+        <label for="CurrentlyEmployed">Are you currently employed?</label>
+        <select id="CurrentlyEmployed" name="CurrentlyEmployed" value="CurrentlyEmployed" required="required">
+            <option value="EmployedYes">Yes</option>
+            <option value="EmployedNo">No</option>
+        </select>
+
+        <label for="EmployeePosition">If yes, what is your position:</label>
+        <input type="text" id="EmployeePosition" name="EmployeePosition"></input>
+
+        <label for="LastDateEmployed">If no, when was the last date you were employed:</label>
+        <input type="date" id="LastDateEmployed" name="LastDateEmployed"></input>
+
+
+        <label for="Employer">Employer:</label>
+        <input type="text" id="Employer" name="Employer"></input>
+
+        <label for="FullorPart">Full or part time?</label>
+        <select id="FullorPart" name="FullorPart" value="FullorPart">
+            <option value="FullorPartYes">Yes</option>
+            <option value="FullorPartNo">No</option>
+        </select>
+    <h4>Purpose of Today's Visit</h4><br>
+        <label for="PurposeofVisit">Purpose of Today's Visit</label>
+        <select id="PurposeofVisit" name="PurposeofVisit" value="PurposeofVisit" required="required">
+            <option value="HomeRepairs">Home Repairs</option>
+            <option value="BenefitsCounseling">Benefits Counseling</option>
+            <option value="SubstanceAbuse">Substance Abuse</option>
+            <option value="LegalAssistance">Legal Assistance</option>
+            <option value="DomesticViolenceIntervention">Domestic Violence Intervention</option>
+            <option value="HomelessPrevention">Homeless Prevention</option>
+            <option value="CurrentlyHomeless">Currently Homeless</option>
+            <option value="Utilities">Utilities</option>
+            <option value="EducationBenefits">Education Benefits</option>
+            <option value="MentalHealthServices">Mental Health Services</option>
+            <option value="Relationship/Parenting">Relationship/Parenting</option>
+            <option value="FinancialCounseling">Financial Counseling</option>
+            <option value="Employment">Employment</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <label for="OtherAgency">Have you worked with any another agencie(s) regarding this issue?</label>
+        <select id="OtherAgency" name="OtherAgency" value="OtherAgency" required="required">
+            <option value="AgencyYes">Yes</option>
+            <option value="AgencyNo">No</option>
+        </select>
+
+        <label for="OtherAgencyList">If yes, please list agencies:</label>
+        <input type="text" id="OtherAgencyList" name="OtherAgencyList" required="required">
+
+        <label for="PreviousVisits"></label>
+        <select id="PreviousVisits" name="PreviousVisits" value="PreviousVisits" required="required">
+            <option value="PreviousYes">Yes</option>
+            <option value="PreviousNo">No</option>
+        </select>
+
+        <label for="PurposeofPreviousVisit">If yes, for what purpose</label>
+        <select id="PurposeofPreviousVisit" name="PurposeofPreviousVisit" value="PurposeofPreviousVisit" required="required">
+            <option value="No Previous Visit">No Previous Visit</option>
+            <option value="HomeRepairs">Home Repairs</option>
+            <option value="BenefitsCounseling">Benefits Counseling</option>
+            <option value="SubstanceAbuse">Substance Abuse</option>
+            <option value="LegalAssistance">Legal Assistance</option>
+            <option value="DomesticViolenceIntervention">Domestic Violence Intervention</option>
+            <option value="HomelessPrevention">Homeless Prevention</option>
+            <option value="CurrentlyHomeless">Currently Homeless</option>
+            <option value="Utilities">Utilities</option>
+            <option value="EducationBenefits">Education Benefits</option>
+            <option value="MentalHealthServices">Mental Health Services</option>
+            <option value="Relationship/Parenting">Relationship/Parenting</option>
+            <option value="FinancialCounseling">Financial Counseling</option>
+            <option value="Employment">Employment</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <label for="CaseNotes">Case Notes:</label>
+        <input type="text" id="CaseNotes" name="CaseNotes">
+    <h4>Family Information</h4><br>
+        <label for="MaritalStatus">Marital Status</label>
+        <select id="MaritalStatus" name="MaritalStatus" value="MaritalStatus" required="required">
+            <option value="Single">Single</option>
+            <option value="Married">Married</option>
+            <option value="Separated">Separated</option>
+            <option value="Divorced">Divorced</option>
+            <option value="Widowed">Widowed</option>
+        </select>
+
+        <label for="SpouseName">Spouse's Name:</label>
+        <input type="text" id="SpouseName" name="SpouseName">
+
+        <label for=""></label>
+        <select id="" name="" value="" required="required">
+            <option value=""></option>
+            <option value=""></option>
+        </select>
+
+        <label for="SpouseService">Has he/she ever served in the millitary?</label>
+        <select id="SpouseService" name="SpouseService" value="SpouseService">
+            <option value="NoSpouse">No Spouse</option>
+            <option value="SpouseYes">Yes(Complete a separate intake)</option>
+            <option value="SpouseNo">No</option>
+        </select>
+
+        <label for="ChildrenInfo">Gender and ages of minor children:</label>
+        <input type="text" id="ChildrenInfo" name="ChildrenInfo">
+
+        <label for="ChildrenResidence">With whom do the children reside with?</label>
+        <select id="ChildrenResidence" name="ChildrenResidence" value="ChildrenResidence">
+            <option value="NoChildren">No Children</option>
+            <option value="Veteran">Veteran</option>
+            <option value="Spouse">Spouse</option>
+            <option value="Both">Both</option>
+            <option value="OtherGuardian">Other Guardian</option>
+        </select>
+
+
+
+
 
                 <br><input type="submit" id="upload" value="Save">
             </form>
+
 
 
 
