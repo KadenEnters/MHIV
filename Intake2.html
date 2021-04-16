@@ -19,6 +19,7 @@
     <a href="Visit2.html">Visit 2</a>
 </nav>
 <body>
+<img id="logo" src="logo">
 <header>
     <h1 style="text-align: center">MHVI - CRM</h1>
     <h2 style="text-align: center">INTAKE FORM</h2>
@@ -39,7 +40,7 @@
                 <input type="text" id="lname" name="Last Name" required="required">
 
                 <label for="address">Address:</label>
-                <input type="text" id="address" name="address" >
+                <input type="text" id="address" name="address" value="N/A">
 
                 <label for="city">City:</label>
                 <input type="text" id="city" name="city" required="required">
@@ -48,22 +49,21 @@
                 <input type="text" id="state" name="State" required="required">
 
                 <label for="zipcode">Zip Code:</label>
-                <input type="text" id="zipcode" name="Zip" maxlength="6">
+                <input type="text" id="zipcode" name="Zip" maxlength="6" value="N/A">
 
                 <label for="IsHomeless">Are you homeless?</label>
                 <select id="IsHomeless" name="IsHomeless?" value="IsHomeless?" required="required">
                     <option value="Yes">Yes</option>
                     <option value="No">No</option>
                 </select>
-                <label for="location">--If yes, where are you staying?:</label>
-                <input type="text" id="location" name="Location">
+                <label for="location">If yes, where are you staying?:</label>
+                <input type="text" id="location" name="Location" value="N/A">
 
-                <label for="phonenumber">Phone#:</label>
-                <input type="text" id="phonenumber" name="Phone#" maxlength="10">
+                <label for="phonenumber">Phone#(no dashes):</label>
+                <input type="text" id="phonenumber" name="Phone#" maxlength="10" value="N/A">
 
                 <label for="email">Email Address:</label>
-
-                <input type="email" id="email" name="Email">
+                <input type="email" id="email" name="Email" value="N/A@email.com">
 
                 <label for="gender">Gender</label>
                 <select id="gender" name="Gender" value="Gender" required="required">
@@ -73,7 +73,6 @@
                 </select>
 
                 <label for="birthday">Birthday:</label>
-
                 <input type="date" id="birthday" name="Birthday" required="required" min="1900-01-01" max="2100-01-01">
 
 
@@ -90,10 +89,10 @@
                     <option value="Other">Other</option>
                 </select>
 
-                <label for="income">Source of Income:</label>
-                <input type="text" id="income" name="Income" required="required">
-                <label for="incomeAmount">Amount of Income:</label>
-                <input type="text" id="incomeAmount" name="Income Amount" required="required">
+                <label for="income">Sources of Income:</label>
+                <input type="text" id="income" name="Income" required="required" value="N/A">
+                <label for="incomeAmount">Amount of Income (List income per source):</label>
+                <input type="text" id="incomeAmount" name="Income Amount" required="required" value="N/A">
 
     <h4>Military</h4><br>
 
@@ -108,7 +107,7 @@
                 </select>
 
                 <label for="TimeofService">Time of Service:</label>
-                <input type="text" id="TimeofService" name="Time of Service" required="required"></textarea>
+                <input type="text" id="TimeofService" name="Time of Service" required="required"></input>
 
         <label for="ActiveDuty">Did you serve on active duty?</label>
         <select id="ActiveDuty" name="ActiveDuty" value="ActiveDuty" required="required">
@@ -117,7 +116,7 @@
         </select>
 
         <label for="ActiveDutyTime">If yes, list dates:</label>
-        <input type="text" id="ActiveDutyTime" name="ActiveDuty"></input>
+        <input type="text" id="ActiveDutyTime" name="ActiveDuty" value="N/A"></input>
 
         <label for="Discharge">Type of discharge:</label>
         <select id="Discharge" name="Discharge" value="Discharge" required="required">
@@ -145,20 +144,51 @@
         </select>
 
         <label for="EmployeePosition">If yes, what is your position:</label>
-        <input type="text" id="EmployeePosition" name="EmployeePosition"></input>
-
-        <label for="LastDateEmployed">If no, when was the last date you were employed:</label>
-        <input type="date" id="LastDateEmployed" name="LastDateEmployed"></input>
+        <input type="text" id="EmployeePosition" name="EmployeePosition" value="N/A"></input>
 
 
         <label for="Employer">Employer:</label>
-        <input type="text" id="Employer" name="Employer"></input>
+        <input type="text" id="Employer" name="Employer" value="N/A"></input>
 
         <label for="FullorPart">Full or part time?</label>
         <select id="FullorPart" name="FullorPart" value="FullorPart">
-            <option value="FullorPartYes">Yes</option>
-            <option value="FullorPartNo">No</option>
+            <option value="FullorPartNoJob">N/A</option>
+            <option value="FullorPartYes">Full Time</option>
+            <option value="FullorPartNo">Part Time</option>
         </select>
+
+        <label for="LastDateEmployed">If no, when was the last date you were employed:</label>
+        <input type="date" id="LastDateEmployed" name="LastDateEmployed" value="N/A"></input>
+
+        <label for="DriversLicence" >Do you have a valid Drivers Licence?</label>
+        <select id="DriversLicence" name="DriversLicence" value="DriversLicence" required="required">
+            <option value="DriversLicenceYes">Yes</option>
+            <option value="DriversLicenceNo">No</option>
+        </select>
+
+        <label for="Transportation">Do you have a form of transportation?</label>
+        <select id="Transportation" name="Transportation" value="Transportation" required="required">
+            <option value="TransportationYes">Yes</option>
+            <option value="TransportationNo">No</option>
+        </select>
+
+        <label for="SpouseWork">Does your spouse work?</label>
+        <select id="SpouseWork" name="SpouseWork" value="SpouseWork">
+            <option value="SpouseWorkNoSpouse">N/A</option>
+            <option value="SpouseWorkYes">Yes</option>
+            <option value="SpouseWorkNo">No</option>
+        </select>
+
+        <label for="SpouseWorkPlace">If yes, where do they work?:</label>
+        <input type="text" id="SpouseWorkPlace" name="SpouseWorkPlace" value="N/A"></input>
+
+        <label for="SpouseFullorPart">Full or part time?</label>
+        <select id="SpouseFullorPart" name="SpouseFullorPart" value="SpouseFullorPart">
+            <option value="SpouseFullorPartNoSpouse">N/A</option>
+            <option value="SpouseFullorPartYes">Yes</option>
+            <option value="SpouseFullorPartNo">No</option>
+        </select>
+
     <h4>Purpose of Today's Visit</h4><br>
         <label for="PurposeofVisit">Purpose of Today's Visit</label>
         <select id="PurposeofVisit" name="PurposeofVisit" value="PurposeofVisit" required="required">
@@ -178,16 +208,16 @@
             <option value="Other">Other</option>
         </select>
 
-        <label for="OtherAgency">Have you worked with any another agencie(s) regarding this issue?</label>
+        <label for="OtherAgency">Have you worked with any another agencies regarding this issue?</label>
         <select id="OtherAgency" name="OtherAgency" value="OtherAgency" required="required">
             <option value="AgencyYes">Yes</option>
             <option value="AgencyNo">No</option>
         </select>
 
         <label for="OtherAgencyList">If yes, please list agencies:</label>
-        <input type="text" id="OtherAgencyList" name="OtherAgencyList" required="required">
+        <input type="text" id="OtherAgencyList" name="OtherAgencyList" value="N/A">
 
-        <label for="PreviousVisits"></label>
+        <label for="PreviousVisits">Have you visited us Previously?:</label>
         <select id="PreviousVisits" name="PreviousVisits" value="PreviousVisits" required="required">
             <option value="PreviousYes">Yes</option>
             <option value="PreviousNo">No</option>
@@ -195,7 +225,7 @@
 
         <label for="PurposeofPreviousVisit">If yes, for what purpose</label>
         <select id="PurposeofPreviousVisit" name="PurposeofPreviousVisit" value="PurposeofPreviousVisit" required="required">
-            <option value="No Previous Visit">No Previous Visit</option>
+            <option value="No Previous Visit">N/A</option>
             <option value="HomeRepairs">Home Repairs</option>
             <option value="BenefitsCounseling">Benefits Counseling</option>
             <option value="SubstanceAbuse">Substance Abuse</option>
@@ -213,7 +243,7 @@
         </select>
 
         <label for="CaseNotes">Case Notes:</label>
-        <input type="text" id="CaseNotes" name="CaseNotes">
+        <input type="text" id="CaseNotes" name="CaseNotes" value="N/A">
     <h4>Family Information</h4><br>
         <label for="MaritalStatus">Marital Status</label>
         <select id="MaritalStatus" name="MaritalStatus" value="MaritalStatus" required="required">
@@ -225,27 +255,21 @@
         </select>
 
         <label for="SpouseName">Spouse's Name:</label>
-        <input type="text" id="SpouseName" name="SpouseName">
-
-        <label for=""></label>
-        <select id="" name="" value="" required="required">
-            <option value=""></option>
-            <option value=""></option>
-        </select>
+        <input type="text" id="SpouseName" name="SpouseName" value="N/A">
 
         <label for="SpouseService">Has he/she ever served in the millitary?</label>
         <select id="SpouseService" name="SpouseService" value="SpouseService">
-            <option value="NoSpouse">No Spouse</option>
+            <option value="NoSpouse">N/A</option>
             <option value="SpouseYes">Yes(Complete a separate intake)</option>
             <option value="SpouseNo">No</option>
         </select>
 
         <label for="ChildrenInfo">Gender and ages of minor children:</label>
-        <input type="text" id="ChildrenInfo" name="ChildrenInfo">
+        <input type="text" id="ChildrenInfo" name="ChildrenInfo" value="N/A">
 
         <label for="ChildrenResidence">With whom do the children reside with?</label>
         <select id="ChildrenResidence" name="ChildrenResidence" value="ChildrenResidence">
-            <option value="NoChildren">No Children</option>
+            <option value="NoChildren">N/A</option>
             <option value="Veteran">Veteran</option>
             <option value="Spouse">Spouse</option>
             <option value="Both">Both</option>
