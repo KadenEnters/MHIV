@@ -2,30 +2,177 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Intake</title>
+    <title>MHVI Home Support Program Delivery Form</title>
     <link href="stylesheet.css" rel="stylesheet">
 </head>
 <nav>
-        <a href="index.html">Home</a>
-        <a href="Intake.html">Intake</a>
-        <a href="Intake2.html">Intake 2</a>
-        <a href="Report.html">Report</a>
-        <a href="Visit.html">Visit</a>
-        <a href="Visit2.html">Visit 2</a>
+    <a href="index.html">Home</a>
+    <a href="Intake.html">Intake</a>
+    <a href="Intake2.html">Intake 2</a>
+    <a href="Report.html">Report</a>
+    <a href="Visit.html">Visit</a>
+    <a href="Visit2.html">Visit 2</a>
 </nav>
 <body>
 <img id="logo" src="Logo.jpg">
 <header>
-    <h1 style="text-align: center">MHVI - CRM</h1>
-    <h2 style="text-align: center">Clients</h2>
+    <h1 style="text-align: center">MHVI Home Support Program Delivery Form</h1>
+
     <div id="user_info">
         User: ADD USER INFO <button style="float:right" name="report_button", type="button">Reports</button>
     </div>
 </header>
-<div id="search_area" style=" text-align: center">
-    Last Name: [This Is Where The Search Bar Will Be] <button name="add_Search_Button", type="button">Add/Search</button>
+<div id="form">
+    <form>
+
+        <label for="callTaker">Call Taker:</label>
+        <input type="text" id="callTaker" name="Call Taker:" required="required">
+
+        <label for="delDay">Delivery Date:</label>
+        <input type="date" id="delDay" name="Delivery Day" required="required" min="1900-01-01" max="3000-01-01">
+
+        <label for="Today">Today's Date:</label>
+        <input type="date" id="Today" name="Today's Day" required="required" min="1900-01-01" max="3000-01-01">
+
+        <label for="moveDate">Move in Date:</label>
+        <input type="date" id="moveDate" name="Move in Day" required="required" min="1900-01-01" max="3000-01-01">
+
+        <label for="vetName">Veteran's Name:</label>
+        <input type="text" id="vetName" name="Veteran's name:" required="required">
+
+        <label for="birthDay">Date of Birth:</label>
+        <input type="date" id="birthDay" name="Date of Birth" required="required" min="1900-01-01" max="3000-01-01">
+
+        <label for="delAddress">Delivery Address:</label>
+        <input type="text" id="delAddress" name="Delivery Address" >
+
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required="required">
+
+        <label for="state">State:</label>
+        <input type="text" id="state" name="State" required="required">
+
+        <label for="zipcode">Zip Code:</label>
+        <input type="text" id="zipcode" name="Zip" maxlength="6">
+
+        <label for="phonenumber">Phone Number:</label>
+        <input type="text" id="phonenumber" name="Phone#" maxlength="10">
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="Email">
+
+        <label>Size of Residence: </label>
+    <!--NOTE FOR CSS TEAM, THIS BIT IS SO THAT THE CHECKBOXES LINE UP IF YOU CAN MAKE IT LOOK NICE WITH OUT THIS THEN DELETE THIS LINE-->    <label> </label>
+<!--NOTE TO ALL, THIS IS A DROP DOWN OPTION FOR THE RESIDENCE SIZE.
+        <label for="residence">Size of Residence: </label>
+        <select id="residence" name="Size of Residence: " value="Size of Residence: " required="required">
+            <option value="Select">Select</option>
+            <option value="Studio">studio/efficiency</option>
+            <option value="1Bed">1 Bedroom</option>
+            <option value="2Bed">2 Bedroom</option>
+            <option value="3Bed">3 Bedroom</option>
+            <option value="OtherR">Other</option>
+        </select>
+        <label for="otherR">Other: </label>
+        <input type="text" for="other" name="If Other: ">
+        -->
+
+        <input type="checkbox" id="studio" name="Studio/efficency">
+        <label for="studio">Studio/efficency</label>
+
+        <input type="checkbox" id="1bed" name="1 Bedroom">
+        <label for="1bed">1 Bedroom</label>
+
+        <input type="checkbox" id="2bed" name="2 Bedroom">
+        <label for="2bed">2 Bedroom</label>
+
+        <input type="checkbox" id="3bed" name="3 Bedroom">
+        <label for="3bed">3 Bedroom</label>
+
+        <input type="checkbox" id="otherR" name="Other: ">
+        <label for="otherR">Other: </label>
+        <input type="text" for="other" name="Other: ">
+
+        <!--NOTE FOR CSS TEAM, THIS BIT IS SO THAT THE CHECKBOXES LINE UP IF YOU CAN MAKE IT LOOK NICE WITH OUT THIS THEN DELETE THIS LINE-->    <label> </label>
+        <label>Ethnicity: </label>
+        <!--NOTE FOR CSS TEAM, THIS BIT IS SO THAT THE CHECKBOXES LINE UP IF YOU CAN MAKE IT LOOK NICE WITH OUT THIS THEN DELETE THIS LINE-->    <label> </label>
+<!--NOTE TO ALL, THIS IS A DROPBOX OPTION FOR THE ETHNICITY.
+        <label for="ethnicity">Ethnicity: </label>
+        <select id="ethnicity" name="Ethnicity" value="Ethnicity" required="required">
+            <option value="Select">Select</option>
+            <option value="african">African American</option>
+            <option value="white">White</option>
+            <option value="asian">Asian</option>
+            <option value="native">Native American</option>
+            <option value="OtherE">Other</option>
+        </select>
+-->
+
+        <input type="checkbox" id="african" name="African American">
+        <label for="african">African American</label>
+
+        <input type="checkbox" id="white" name="White">
+        <label for="white">White</label>
+
+        <input type="checkbox" id="asian" name="Asian">
+        <label for="asian">Asian</label>
+
+        <input type="checkbox" id="native" name="Native American">
+        <label for="native">Native American</label>
+
+        <input type="checkbox" id="hispanic" name="Hispanic/Latino">
+        <label for="hispanic">Hispanic/Latino</label>
+
+        <input type="checkbox" id="otherE" name="Other">
+        <label for="otherE">Other</label>
+
+        <label for="spouse?">Spouse or partner living with veteran?</label>
+        <select id="spouse?" name="spouse?" value="spouse?" required="required">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <label for="#people">Number of people in household: </label>
+        <input type="text" id="#people" name="#people" required="required">
+
+        <label for="children">Ages and gender of all children living with veteran at this address(If none enter None): </label>
+        <input type="text" id="children" name="children" required="required">
+
+        <label for="branch">Branch of Service: </label>
+        <input type="text" id="branch" name="branch" required="required">
+
+        <label for="serviceYears">Years of Service: </label>
+        <input type="text" id="serviceYears" name="serviceYears" required="required">
+
+        <label for="referredBy">Referred by: </label>
+        <input type="text" id="referredBy" name="referredBy" required="required">
+
+        <label for="serviceConnected">Service Connected?</label>
+        <select id="serviceConnected" name="serviceConnected" value="serviceConnected" required="required">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <label for="delivered?">Have we delivered to you before?</label>
+        <select id="delivered?" name="delivered?" value="delivered?" required="required">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+    </form>
+    <p>We will call you on the day we deliver. If you do not answer, we will not deliver to you. You must be present with a VA identification car or DD-214.
+        <ol>
+    <li>Milwaukee Homeless Veterans Initiative is a Non-Profit Organization that works with the community, veterans' organizations, including the VA and Center for Veterans issues to assist homeless and at-risk veterans. We are not affiliated with the VA or any government agency.</li>
+    <li>We receive gently used furniture that we deliver at no charge.</li>
+    <li>We do not exchange, replace, or duplicate any items you already have, or accept any liability for the furniture we give you.</li>
+    <li>You must be present at the time of the delivery, because we require your signature on the form.</li>
+    <li>The entrance to the residence and the sidewalks must be clear of any snow, ice, or obstructions.</li>
+    <li>IF YOU NEED TO RESCHEDULE OR IF YOU HAVE A NEW PHONE NUMBER YOU MUST NOTIFY IS BEOFRE YOUR DELIVERY DATE. WE WILL CALL YOU ON THE DAY WE DELIVER. IF YOU DO NOT ANSWER WE WILL NOT DELIVER TO YOU.</li>
+        </ol>
+        We are open Monday thru Friday until 4pm. We do our best to fill your furniture needs on move in day, but we cannot always meet every need due to the inventory in our warehouse, let us now g through the list of standard items for delivery.
+    </p>
+
 </div>
 
-SEARCHED NAMEs<button>Edit</button> <button>Visit</button> <button>Service</button>
 </body>
 </html>
