@@ -16,7 +16,7 @@ clientsRef.get().then((querySnapshot) => {
 });
 function init() {
     $('#upload').on('click', addClient);
-    $('#search').on('click', searchClient())
+    $('#search').on('click', searchClient);
 }
 function LoadTable(querySnapshot) {
     var tableRow='';
@@ -37,34 +37,46 @@ function LoadTable(querySnapshot) {
     $('#tbody').html(tableRow);
 }
 function addClient() {
-    let fName = $('#fname').val();
-    let lName = $('#lname').val();
-    let address =$('#address').val();
-    let city =$('#city').val();
-    let state =$('#state').val();
-    let zipcode =$('#zipcode').val();
-    let isHomeless =$('#IsHomeless').val();
-    let location =$('#location').val();
-    let phonenumber =$('#phonenumber').val();
-    let email =$('#email').val();
-    let gender =$('#gender').val();
-    let birthday =$('#birthday').val();
-    let ssn =$('#ssn').val();
-    let race =$('#race').val();
-    let income =$('#income').val();
-    let branch =$('#branch').val();
-    let timeofService =$('#TimeofService').val();
-    let vaBenefits =$('#VABenefits').val();
+    console.log("test")
+    let fname = $('#fname').val();
+    let lname = $('#lname').val();
+    let address = $('#address').val();
+    let city = $('#city').val();
+    let state = $('#state').val();
+    let zipcode = $('#zipcode').val();
+    let isHomeless = $('#IsHomeless').val();
+    let location = $('#location').val();
+    let phonenumber = $('#phonenumber').val();
+    let email = $('#email').val();
+    let gender = $('#gender').val();
+    let birthday = $('#birthday').val();
+    let ssn = $('#ssn').val();
+    let race = $('#race').val();
+    let income = $('#income').val();
+    let branch = $('#branch').val();
+    let timeofService = $('#TimeofService').val();
+    let vaBenefits = $('#VABenefits').val();
     let serviceVerification = $('#ServiceVerification').val();
     clientsRef.add({
-        FirstName: fName,
-        LastName: lName,
+        FirstName: fname,
+        LastName: lname,
         Address: address,
         City: city,
         State: state,
-        ZipCode: zip,
+        ZipCode: zipcode,
+        IsHomless: isHomeless,
+        Location: location,
+        PhoneNumber: phonenumber,
+        Email: email,
         Gender: gender,
-        Birthday: birthday
+        Birthday: birthday,
+        Ssn: ssn,
+        Race: race,
+        Income: income,
+        Branch: branch,
+        TimeofService: timeofService,
+        VABenefits: vaBenefits,
+        ServiceVerification: serviceVerification
     }).then(function(docRef) {
         console.log("Document written with ID: ", docRef.id);
     })
@@ -83,8 +95,6 @@ function searchClient() {
         });
 }
 
-let db = firebase.firestore();
-let clientsRef = db.collection("clients");
 clientsRef.get().then((querySnapshot) => {
     LoadTable(querySnapshot);
     querySnapshot.forEach((doc) => {
