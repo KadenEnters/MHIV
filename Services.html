@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Intake2</title>
+    <link href="stylesheet.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
+    <script src="javascript.js"></script>
+</head>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="Delivery%20Form.html">Delivery Form</a>
+    <a href="Intake2.html">Intake 2</a>
+    <a href="Report.html">Report</a>
+    <a href="Pickup Form.html">Pickup Form</a>
+</nav>
+<body>
+    <header>
+        <h1 style="text-align: center; margin-top: 0">SERVICES</h1>
+        <div id="user_info">
+            User: ADD USER INFO <button style="float:right" name="report_button", type="button">Reports</button>
+        </div>
+    </header>
+    <div id="form">
+    <form>
+        <h4>Name</h4><br>
+            <label for="fnameservices">*First Name:</label>
+            <input type="text" id="fnameservices" name="First Name" required="required">
+
+            <label for="lnameservices">*Last Name:</label>
+            <input type="text" id="lnameservices" name="Last Name" required="required">
+        <h4>Purpose of Today's Visit</h4><br>
+            <label for="PurposeofVisit">*Purpose of Today's Visit</label>
+            <select id="PurposeofVisit" name="PurposeofVisit" value="PurposeofVisit" required="required">
+                <option value="HomeRepairs">Home Repairs</option>
+                <option value="BenefitsCounseling">Benefits Counseling</option>
+                <option value="SubstanceAbuse">Substance Abuse</option>
+                <option value="LegalAssistance">Legal Assistance</option>
+                <option value="DomesticViolenceIntervention">Domestic Violence Intervention</option>
+                <option value="HomelessPrevention">Homeless Prevention</option>
+                <option value="CurrentlyHomeless">Currently Homeless</option>
+                <option value="Utilities">Utilities</option>
+                <option value="EducationBenefits">Education Benefits</option>
+                <option value="MentalHealthServices">Mental Health Services</option>
+                <option value="Relationship/Parenting">Relationship/Parenting</option>
+                <option value="FinancialCounseling">Financial Counseling</option>
+                <option value="Employment">Employment</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="OtherAgency">*Have you worked with any another agencies regarding this issue?</label>
+            <select id="OtherAgency" name="OtherAgency" value="OtherAgency" required="required">
+                <option value="AgencyYes">Yes</option>
+                <option value="AgencyNo">No</option>
+            </select>
+
+            <label for="OtherAgencyList">If yes, please list agencies:</label>
+            <input type="text" id="OtherAgencyList" name="OtherAgencyList" value="N/A">
+
+            <label for="PreviousVisits">*Have you visited us Previously?:</label>
+            <select id="PreviousVisits" name="PreviousVisits" value="PreviousVisits" required="required">
+                <option value="PreviousYes">Yes</option>
+                <option value="PreviousNo">No</option>
+            </select>
+
+            <label for="PurposeofPreviousVisit">If yes, for what purpose</label>
+            <select id="PurposeofPreviousVisit" name="PurposeofPreviousVisit" value="PurposeofPreviousVisit">
+                <option value="No Previous Visit">N/A</option>
+                <option value="HomeRepairs">Home Repairs</option>
+                <option value="BenefitsCounseling">Benefits Counseling</option>
+                <option value="SubstanceAbuse">Substance Abuse</option>
+                <option value="LegalAssistance">Legal Assistance</option>
+                <option value="DomesticViolenceIntervention">Domestic Violence Intervention</option>
+                <option value="HomelessPrevention">Homeless Prevention</option>
+                <option value="CurrentlyHomeless">Currently Homeless</option>
+                <option value="Utilities">Utilities</option>
+                <option value="EducationBenefits">Education Benefits</option>
+                <option value="MentalHealthServices">Mental Health Services</option>
+                <option value="Relationship/Parenting">Relationship/Parenting</option>
+                <option value="FinancialCounseling">Financial Counseling</option>
+                <option value="Employment">Employment</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="CaseNotes">Case Notes:</label>
+            <input type="text" id="CaseNotes" name="CaseNotes" value="N/A">
+
+        <br><input type="submit" id="upload" value="Save">
+    </form>
+        </div>
+</body>
+</html>
