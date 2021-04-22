@@ -14,3 +14,25 @@ Navigation is locked to the top of the page, and seperated from the rest
 		--Boxes are all roughly the same size. 
 Other buttons not on the Nav are an emerald green. 
 
+
+JS Ids
+--
+    fname
+    lname
+    address
+    city
+    state
+    zipcode
+    IsHomeless?
+    location
+    phonenumber
+    email
+    gender
+    birthday
+    4dssn -- 4 last digits of ssn
+    race
+    income
+    branch
+    TimeofService
+    VABenefits?
+    ServiceVerification
