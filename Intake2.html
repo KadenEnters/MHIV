@@ -11,8 +11,8 @@
         <script src="javascript.js"></script>
 </head>
 <nav>
-    <a href="Intake.html">Intake</a>
     <a href="index.html">Home</a>
+    <a href="Intake.html">Intake</a>
     <a href="Intake2.html">Intake 2</a>
     <a href="Report.html">Report</a>
     <a href="Visit.html">Visit</a>
@@ -30,28 +30,28 @@
 <div id="form">
     <form>
     <h4>Basic Information</h4><br>
-                <label for="CurrentDate">Current Date:</label>
-                <input type="date" id="CurrentDate" name="CurrentDate">
+                <label for="CurrentDate">*Current Date:</label>
+                <input type="date" id="CurrentDate" name="CurrentDate" required="required">
 
-                <label for="fname">First Name:</label>
+                <label for="fname">*First Name:</label>
                 <input type="text" id="fname" name="First Name" required="required">
 
-                <label for="lname">Last Name:</label>
+                <label for="lname">*Last Name:</label>
                 <input type="text" id="lname" name="Last Name" required="required">
 
                 <label for="address">Address:</label>
                 <input type="text" id="address" name="address" value="N/A">
 
-                <label for="city">City:</label>
+                <label for="city">*City:</label>
                 <input type="text" id="city" name="city" required="required">
 
-                <label for="state">State:</label>
+                <label for="state">*State:</label>
                 <input type="text" id="state" name="State" required="required">
 
                 <label for="zipcode">Zip Code:</label>
                 <input type="text" id="zipcode" name="Zip" maxlength="6" value="N/A">
 
-                <label for="IsHomeless">Are you homeless?</label>
+                <label for="IsHomeless">*Are you homeless?</label>
                 <select id="IsHomeless" name="IsHomeless?" value="IsHomeless?" required="required">
                     <option value="Yes">Yes</option>
                     <option value="No">No</option>
@@ -65,21 +65,20 @@
                 <label for="email">Email Address:</label>
                 <input type="email" id="email" name="Email" value="N/A@email.com">
 
-                <label for="gender">Gender</label>
+                <label for="gender">*Gender</label>
                 <select id="gender" name="Gender" value="Gender" required="required">
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
                     <option value="Other">Other</option>
                 </select>
 
-                <label for="birthday">Birthday:</label>
+                <label for="birthday">*Birthday:</label>
                 <input type="date" id="birthday" name="Birthday" required="required" min="1900-01-01" max="2100-01-01">
 
+                <label for="ssn">*Last 4# of SS:</label>
+                <input type="text" id="ssn" name="4SS#" required="required" maxlength="4">
 
-                <label for="ssn">Last 4# of SS:</label>
-                <input type="text" id="ssn" name="4SS#" required="required">
-
-                <label for="race">Race</label>
+                <label for="race">*Race</label>
                 <select id="race" name="Race" value="Race" required="required">
                     <option value="Asian">Asian</option>
                     <option value="African American">African American</option>
@@ -89,14 +88,14 @@
                     <option value="Other">Other</option>
                 </select>
 
-                <label for="income">Sources of Income:</label>
+                <label for="income">*Sources of Income:</label>
                 <input type="text" id="income" name="Income" required="required" value="N/A">
-                <label for="incomeAmount">Amount of Income (List income per source):</label>
+                <label for="incomeAmount">*Amount of Income (List income per source):</label>
                 <input type="text" id="incomeAmount" name="Income Amount" required="required" value="N/A">
 
     <h4>Military</h4><br>
 
-                <label for="branch">What branch of the military did you serve?</label>
+                <label for="branch">*What branch of the military did you serve?</label>
                 <select id="branch" name="Branch" value="Branch" required="required">
                     <option value="Army">Army</option>
                     <option value="Navy">Navy</option>
@@ -106,10 +105,10 @@
                     <option value="Reserves/National Guard">Reserves/National Guard</option>
                 </select>
 
-                <label for="TimeofService">Time of Service:</label>
+                <label for="TimeofService">*Time of Service:</label>
                 <input type="text" id="TimeofService" name="Time of Service" required="required"></input>
 
-        <label for="ActiveDuty">Did you serve on active duty?</label>
+        <label for="ActiveDuty">*Did you serve on active duty?</label>
         <select id="ActiveDuty" name="ActiveDuty" value="ActiveDuty" required="required">
             <option value="ActiveDutyYes">Yes</option>
             <option value="ActiveDutyNo">No</option>
@@ -118,7 +117,7 @@
         <label for="ActiveDutyTime">If yes, list dates:</label>
         <input type="text" id="ActiveDutyTime" name="ActiveDuty" value="N/A"></input>
 
-        <label for="Discharge">Type of discharge:</label>
+        <label for="Discharge">*Type of discharge:</label>
         <select id="Discharge" name="Discharge" value="Discharge" required="required">
             <option value="Honorable">Honorable</option>
             <option value="UnderHonorable">UnderHonorable</option>
@@ -129,7 +128,7 @@
         </select>
 
 
-                <label for="ServiceVerification">Millitary Service Verification</label>
+                <label for="ServiceVerification">*Millitary Service Verification</label>
                 <select id="ServiceVerification" name="Service Verification" value="Service Verification" required="required">
                     <option value="DD214">DD214</option>
                     <option value="VA Card">VA Card</option>
@@ -137,7 +136,7 @@
                 </select>
 
     <h4>Employment</h4><br>
-        <label for="CurrentlyEmployed">Are you currently employed?</label>
+        <label for="CurrentlyEmployed">*Are you currently employed?</label>
         <select id="CurrentlyEmployed" name="CurrentlyEmployed" value="CurrentlyEmployed" required="required">
             <option value="EmployedYes">Yes</option>
             <option value="EmployedNo">No</option>
@@ -160,13 +159,13 @@
         <label for="LastDateEmployed">If no, when was the last date you were employed:</label>
         <input type="date" id="LastDateEmployed" name="LastDateEmployed" value="N/A"></input>
 
-        <label for="DriversLicence" >Do you have a valid Drivers Licence?</label>
+        <label for="DriversLicence" >*Do you have a valid Drivers Licence?</label>
         <select id="DriversLicence" name="DriversLicence" value="DriversLicence" required="required">
             <option value="DriversLicenceYes">Yes</option>
             <option value="DriversLicenceNo">No</option>
         </select>
 
-        <label for="Transportation">Do you have a form of transportation?</label>
+        <label for="Transportation">*Do you have a form of transportation?</label>
         <select id="Transportation" name="Transportation" value="Transportation" required="required">
             <option value="TransportationYes">Yes</option>
             <option value="TransportationNo">No</option>
@@ -190,7 +189,7 @@
         </select>
 
     <h4>Purpose of Today's Visit</h4><br>
-        <label for="PurposeofVisit">Purpose of Today's Visit</label>
+        <label for="PurposeofVisit">*Purpose of Today's Visit</label>
         <select id="PurposeofVisit" name="PurposeofVisit" value="PurposeofVisit" required="required">
             <option value="HomeRepairs">Home Repairs</option>
             <option value="BenefitsCounseling">Benefits Counseling</option>
@@ -208,7 +207,7 @@
             <option value="Other">Other</option>
         </select>
 
-        <label for="OtherAgency">Have you worked with any another agencies regarding this issue?</label>
+        <label for="OtherAgency">*Have you worked with any another agencies regarding this issue?</label>
         <select id="OtherAgency" name="OtherAgency" value="OtherAgency" required="required">
             <option value="AgencyYes">Yes</option>
             <option value="AgencyNo">No</option>
@@ -217,14 +216,14 @@
         <label for="OtherAgencyList">If yes, please list agencies:</label>
         <input type="text" id="OtherAgencyList" name="OtherAgencyList" value="N/A">
 
-        <label for="PreviousVisits">Have you visited us Previously?:</label>
+        <label for="PreviousVisits">*Have you visited us Previously?:</label>
         <select id="PreviousVisits" name="PreviousVisits" value="PreviousVisits" required="required">
             <option value="PreviousYes">Yes</option>
             <option value="PreviousNo">No</option>
         </select>
 
         <label for="PurposeofPreviousVisit">If yes, for what purpose</label>
-        <select id="PurposeofPreviousVisit" name="PurposeofPreviousVisit" value="PurposeofPreviousVisit" required="required">
+        <select id="PurposeofPreviousVisit" name="PurposeofPreviousVisit" value="PurposeofPreviousVisit">
             <option value="No Previous Visit">N/A</option>
             <option value="HomeRepairs">Home Repairs</option>
             <option value="BenefitsCounseling">Benefits Counseling</option>
@@ -245,7 +244,7 @@
         <label for="CaseNotes">Case Notes:</label>
         <input type="text" id="CaseNotes" name="CaseNotes" value="N/A">
     <h4>Family Information</h4><br>
-        <label for="MaritalStatus">Marital Status</label>
+        <label for="MaritalStatus">*Marital Status</label>
         <select id="MaritalStatus" name="MaritalStatus" value="MaritalStatus" required="required">
             <option value="Single">Single</option>
             <option value="Married">Married</option>
