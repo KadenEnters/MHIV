@@ -58,7 +58,7 @@ nav a:hover { transition: 0.3s; color: #1d4374; }
 .Titanic{
     float:none
 }
-input[type=email], input[type=number], input[type=password], input[type=tel], input[type=text], input[type=url], textarea{
+input[type=email], input[type=number], input[type=password], input[type=tel], input[type=text], input[type=url], textarea, select, input[type=date]{
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
@@ -82,7 +82,7 @@ input[type=email], input[type=number], input[type=password], input[type=tel], in
 }
 
 input[type='submit'], button, .btn{
-    color: white;
+    color: #1d4374;
     text-decoration: none;
     background-color: rgba(0,0,0, .2);  /* change button color here */
     -moz-border-radius: 2px;
@@ -137,7 +137,7 @@ table {
 td {
     padding: 15px;
     background-color: rgba(255,255,255,0.2);
-    color: #fff;
+    color: #1d4374;
 }
 
 th {
