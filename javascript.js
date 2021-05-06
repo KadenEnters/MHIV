@@ -100,4 +100,47 @@ function searchClient() {
 //         console.log(doc.id, " => ", doc.data());
 //     })
 // });
+function displayLocation() {
+    var x = document.getElementById("IsHomeless").value;
+    if (x=="Yes") {
+        $(".locationStuff").show();
+    } else if(x=="No") {
+        $(".locationStuff").hide();
+    }
+}
+function displayMaritalStatus() {
+    var x = document.getElementById("MaritalStatus").value;
+    if (x=="Married") {
+        $(".hasSpouse").show();
+    } else {
+        $(".hasSpouse").hide();
+        $(".hasSpousework").hide();
+    }
+}
+function displayEmploymentStatus() {
+    var x = document.getElementById("CurrentlyEmployed").value;
+    if (x=="EmployedYes") {
+        $(".hasJob").show();
+        $(".hasNoJob").hide();
+    } else {
+        $(".hasJob").hide();
+        $(".hasNoJob").show();
+    }
+}
+function displaySpouseWorkStatus() {
+    var x = document.getElementById("SpouseWork").value;
+    if (x == "SpouseWorkYes") {
+        $(".hasSpousework").show();
+    } else {
+        $(".hasSpousework").hide();
+    }
+}
+function displayActiveduty() {
+    var x = document.getElementById("ActiveDuty").value;
+    if (x == "ActivedutyYes") {
+        $(".ActiveDutyTimeYes").show();
+    } else {
+        $(".ActiveDutyTimeYes").hide();
+    }
+}
 
