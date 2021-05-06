@@ -24,7 +24,6 @@ function LoadTable(querySnapshot) {
         tableRow += '<tr>';
         tableRow += '<td class="lname">' + document.LastName + ',</td>';
         tableRow += '<td class="fname">' + document.FirstName + '</td>';
-        tableRow += '<td>           </td>';
         tableRow += '<td><input type="button" id="edit" value="Edit"></td>';
         tableRow += '<td><input type="button" id="visit" value="Visit"></td>';
         tableRow += '<td><input type="button" id="service" value="Service"></td>';
@@ -34,6 +33,7 @@ function LoadTable(querySnapshot) {
 }
 function addClient() {
     console.log("test")
+    let intakeDate = $('#intakeDate').val()
     let fname = $('#fname').val();
     let lname = $('#lname').val();
     let address = $('#address').val();
@@ -55,6 +55,7 @@ function addClient() {
     let ActiveDutyTime = $('#ActiveDutyTime').val();
     let serviceVerification = $('#ServiceVerification').val();
     clientsRef.add({
+        IntakeDate: intakeDate,
         FirstName: fname,
         LastName: lname,
         LastName_lower: lname.toLowerCase(),
@@ -101,3 +102,13 @@ clientsRef.get().then((querySnapshot) => {
     })
 });
 
+$(document).ready(function(){
+    let today = new Date();
+    let date = today.getFullYear()+ '-' +(today.getMonth()+1)+ '-' +today.getDate()
+    let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds()
+    document.getElementById("intakeDate").innerHTML = date + ' ' + time;
+});
+
+function getReport() {
+    clientsRef.orderBy("intakeDate").limit(50);
+}
