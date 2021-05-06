@@ -123,8 +123,8 @@ function displayEmploymentStatus() {
         $(".hasJob").show();
         $(".hasNoJob").hide();
     } else {
-        $(".hasJob").hide();
         $(".hasNoJob").show();
+        $(".hasJob").hide();
     }
 }
 function displaySpouseWorkStatus() {
@@ -137,7 +137,7 @@ function displaySpouseWorkStatus() {
 }
 function displayActiveduty() {
     var x = document.getElementById("ActiveDuty").value;
-    if (x == "ActivedutyYes") {
+    if (x == "ActiveDutyYes") {
         $(".ActiveDutyTimeYes").show();
     } else {
         $(".ActiveDutyTimeYes").hide();

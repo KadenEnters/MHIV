@@ -162,28 +162,6 @@
                 </select>
 
     <h4>Employment</h4><br>
-        <label for="CurrentlyEmployed">*Are you currently employed?</label>
-        <select id="CurrentlyEmployed" name="CurrentlyEmployed" value="CurrentlyEmployed" required="required" onchange="displayEmploymentStatus()">
-            <option value="EmployedYes">Yes</option>
-            <option value="EmployedNo">No</option>
-        </select>
-
-        <label class="hasJob" for="EmployeePosition">What is your position:</label>
-        <input class="hasJob" type="text" id="EmployeePosition" name="EmployeePosition" value="N/A"></input>
-
-
-        <label class="hasJob" for="Employer">Employer:</label>
-        <input class="hasJob" type="text" id="Employer" name="Employer" value="N/A"></input>
-
-        <label class="hasJob" for="FullorPart">Full or part time?</label>
-        <select class="hasJob" id="FullorPart" name="FullorPart" value="FullorPart">
-            <option value="FullorPartYes">Full Time</option>
-            <option value="FullorPartNo">Part Time</option>
-        </select>
-
-        <label class="hasNoJob" for="LastDateEmployed">When was the last date you were employed:</label>
-        <input type="date" id="LastDateEmployed" name="LastDateEmployed"></input>
-
         <label for="DriversLicence" >*Do you have a valid Drivers Licence?</label>
         <select id="DriversLicence" name="DriversLicence" value="DriversLicence" required="required">
             <option value="DriversLicenceYes">Yes</option>
@@ -203,7 +181,7 @@
         </select>
 
         <label class="hasSpousework" for="SpouseWorkPlace">Where do they work?:</label>
-        <input class="hasSpousework" type="text" id="SpouseWorkPlace" name="SpouseWorkPlace" value="N/A"></input>
+        <input class="hasSpousework" type="text" id="SpouseWorkPlace" name="SpouseWorkPlace"></input>
 
         <label class="hasSpousework" for="SpouseFullorPart">Full or part time?</label>
         <select class="hasSpousework" id="SpouseFullorPart" name="SpouseFullorPart" value="SpouseFullorPart">
@@ -211,6 +189,26 @@
             <option value="SpouseFullorPartNo">No</option>
         </select>
 
+        <label for="CurrentlyEmployed">*Are you currently employed?</label>
+        <select id="CurrentlyEmployed" name="CurrentlyEmployed" value="CurrentlyEmployed" required="required" onchange="displayEmploymentStatus()">
+            <option value="EmployedYes">Yes</option>
+            <option value="EmployedNo">No</option>
+        </select>
+
+        <label class="hasNoJob" for="LastDateEmployed">When was the last date you were employed:</label>
+        <input type="date" id="LastDateEmployed" name="LastDateEmployed"></input>
+
+        <label class="hasJob" for="EmployeePosition">What is your position:</label>
+        <input class="hasJob" type="text" id="EmployeePosition" name="EmployeePosition"></input>
+
+        <label class="hasJob" for="Employer">Employer:</label>
+        <input class="hasJob" type="text" id="Employer" name="Employer"></input>
+
+        <label class="hasJob" for="FullorPart">Full or part time?</label>
+        <select class="hasJob" id="FullorPart" name="FullorPart" value="FullorPart">
+            <option value="FullorPartYes">Full Time</option>
+            <option value="FullorPartNo">Part Time</option>
+        </select>
 
             <br><input type="submit" id="upload" value="Save">
             </form>
