@@ -56,7 +56,7 @@
                 <input class="locationStuff" type="text" id="YesLocation" name="Location">
 
                 <label for="phonenumber">Phone#(no dashes):</label>
-                <input type="text" id="phonenumber" name="Phone#" maxlength="10" value="N/A">
+                <input type="text" id="phonenumber" name="Phone#" maxlength="10" >
 
                 <label for="email">Email Address:</label>
                 <input type="email" id="email" name="Email" value="N/A@email.com">
@@ -85,9 +85,9 @@
                 </select>
 
                 <label for="income">*Sources of Income:</label>
-                <input type="text" id="income" name="Income" required="required" value="N/A">
+                <input type="text" id="income" name="Income" required="required">
                 <label for="incomeAmount">*Amount of Income (List income per source):</label>
-                <input type="text" id="incomeAmount" name="Income Amount" required="required" value="N/A">
+                <input type="text" id="incomeAmount" name="Income Amount" required="required">
         <h4>Family Information</h4><br>
         <label for="MaritalStatus">*Marital Status</label>
         <select id="MaritalStatus" name="MaritalStatus" value="MaritalStatus" required="required" onchange="displayMaritalStatus()">
@@ -162,6 +162,31 @@
                 </select>
 
     <h4>Employment</h4><br>
+<<<<<<< HEAD
+=======
+        <label for="CurrentlyEmployed">*Are you currently employed?</label>
+        <select id="CurrentlyEmployed" name="CurrentlyEmployed" value="CurrentlyEmployed" required="required" onchange="displayEmploymentStatus()">
+            <option value="EmployedYes">Yes</option>
+            <option value="EmployedNo">No</option>
+        </select>
+
+        <label class="hasJob" for="EmployeePosition">What is your position:</label>
+        <input class="hasJob" type="text" id="EmployeePosition" name="EmployeePosition"></input>
+
+
+        <label class="hasJob" for="Employer">Employer:</label>
+        <input class="hasJob" type="text" id="Employer" name="Employer"></input>
+
+        <label class="hasJob" for="FullorPart">Full or part time?</label>
+        <select class="hasJob" id="FullorPart" name="FullorPart" value="FullorPart">
+            <option value="FullorPartYes">Full Time</option>
+            <option value="FullorPartNo">Part Time</option>
+        </select>
+
+        <label class="hasNoJob" for="LastDateEmployed">When was the last date you were employed:</label>
+        <input type="date" id="LastDateEmployed" name="LastDateEmployed"></input>
+
+>>>>>>> Dom
         <label for="DriversLicence" >*Do you have a valid Drivers Licence?</label>
         <select id="DriversLicence" name="DriversLicence" value="DriversLicence" required="required">
             <option value="DriversLicenceYes">Yes</option>
