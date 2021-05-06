@@ -94,10 +94,10 @@ function searchClient() {
         });
 }
 
-// clientsRef.get().then((querySnapshot) => {
-//     LoadTable(querySnapshot);
-//     querySnapshot.forEach((doc) => {
-//         console.log(doc.id, " => ", doc.data());
-//     })
-// });
+clientsRef.get().then((querySnapshot) => {
+    LoadTable(querySnapshot);
+    querySnapshot.forEach((doc) => {
+        console.log(doc.id, " => ", doc.data());
+    })
+});
 
