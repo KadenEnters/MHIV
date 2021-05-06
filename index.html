@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <title>MHVI - CRM: Home Page</title>
      <link href="stylesheet.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
+    <script src="javascript.js"></script>
 </head>
 <nav>
     <a href="index.html">Home</a>
@@ -13,70 +17,63 @@
     <a href="Pickup Form.html">Pickup Form</a>
     <a href="Services.html">Services</a>
 </nav>
-<body>
+
+
 <header>
-    <h1 style="text-align: center">MHVI - CRM</h1>
-    <h2 style="text-align: center">Home</h2>
-    <div id="user_info">
-         <button style="float:right" name="report_button", type="button">Reports</button>
-    </div>
+    <h1 style="text-align: center">MHVI - CRM</h1>test
 </header>
-<div id="search_area" style=" text-align: center">
-        Last Name: [This Is Where The Search Bar Will Be] <button name="add_Search_Button", type="button">Add/Search</button>
-    </div>
-
-<div class="container">
-    <table>
-        <thead>
-        <tr>
-            <th>Column 1</th>
-            <th>Column 2</th>
-            <th>Column 3</th>
-            <th>Column 4</th>
-            <th>Column 5</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>Cell 1</td>
-            <td>Cell 2</td>
-            <td>Cell 3</td>
-            <td>Cell 4</td>
-            <td>Cell 5</td>
-        </tr>
-        <tr>
-            <td>Cell 1</td>
-            <td>Cell 2</td>
-            <td>Cell 3</td>
-            <td>Cell 4</td>
-            <td>Cell 5</td>
-        </tr>
-        <tr>
-            <td>Cell 1</td>
-            <td>Cell 2</td>
-            <td>Cell 3</td>
-            <td>Cell 4</td>
-            <td>Cell 5</td>
-        </tr>
-        <tr>
-            <td>Cell 1</td>
-            <td>Cell 2</td>
-            <td>Cell 3</td>
-            <td>Cell 4</td>
-            <td>Cell 5</td>
-        </tr>
-        <tr>
-            <td>Cell 1</td>
-            <td>Cell 2</td>
-            <td>Cell 3</td>
-            <td>Cell 4</td>
-            <td>Cell 5</td>
-        </tr>
-        </tbody>
-    </table>
+<body>
+<div id="search_area" style=" text-align: center;margin-left: auto;margin-right: auto;width: 40%" >
+    Last Name: <input type="text" id="lastName">
+    <button id="search", type="button">Add/Search</button>
 </div>
-</body>
-<footer>
+    <br><br><table class="container">
+        <thead>
+            <tr>
+                <th>Last Name</th>
+                <th>First Name</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+            <tr>
+                <td>Cell 1</td>
+                <td>Cell 2</td>
+                <td>Cell 3</td>
+                <td>Cell 4</td>
+                <td>Cell 5</td>
+            </tr>
+            <tr>
+                <td>Cell 1</td>
+                <td>Cell 2</td>
+                <td>Cell 3</td>
+                <td>Cell 4</td>
+                <td>Cell 5</td>
+            </tr>
+            <tr>
+                <td>Cell 1</td>
+                <td>Cell 2</td>
+                <td>Cell 3</td>
+                <td>Cell 4</td>
+                <td>Cell 5</td>
+            </tr>
+            <tr>
+                <td>Cell 1</td>
+                <td>Cell 2</td>
+                <td>Cell 3</td>
+                <td>Cell 4</td>
+                <td>Cell 5</td>
+            </tr>
+            <tr>
+                <td>Cell 1</td>
+                <td>Cell 2</td>
+                <td>Cell 3</td>
+                <td>Cell 4</td>
+                <td>Cell 5</td>
+            </tr>
+            </tbody>
+        </table>
+    </body>
+    <footer>
 
-</footer>
+    </footer>
 </html>
