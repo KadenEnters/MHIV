@@ -17,12 +17,10 @@
 
 <header>
     <h1 style="text-align: center">Pickup Form</h1>
-    <div id="user_info">
-        User: ADD USER INFO <button style="float:right" name="report_button", type="button">Reports</button>
-    </div>
 </header>
 <div id="MHVILocationInfo">
-    <table style="width:100%">
+    <table style="width:75%;margin-left: auto;
+    margin-right: auto;">
         <tr>
             <th>Always ask first:</th>
         </tr>
@@ -80,138 +78,139 @@
             <option value="other">Other</option>
         </select>
 
-    </form>
-    <p>**Our Drivers will wake final determination on acceptance of all items picked up**</p>
-    <table>
-        <tr>
-            <th>Furniture items: Please have the items clean and ready for pickup</th>
-            <th>#To be picked up</th>
-            <th># Picked up</th>
-            <th>Declined-Why</th>
-        </tr>
-        <tr>
-            <td>Bed Frames: twin, full, or queen</td>
-            <td><input type="text" id="bedToBePickedup" name=""></td>
-            <td><input type="text" id="bedPickedup" name=""></td>
-            <td><input type="text" id="bedwhyDeclined" name=""></td>
-        </tr>
-        <tr>
-            <td>Mattress and Box Spring: twin, full, or queen</td>
-            <td><input type="text" id="mattressToBePickedup" name=""></td>
-            <td><input type="text" id="mattressPickedup" name=""></td>
-            <td><input type="text" id="mattresswhyDeclined" name=""></td>
-        </tr>
-        <tr>
-            <td>Cart: kitchen, microwave, TV stand</td>
-            <td><input type="text" id="cartToBePickedup" name=""></td>
-            <td><input type="text" id="cartPickedup" name=""></td>
-            <td><input type="text" id="cartwhyDeclined" name=""></td>
-        </tr>
-        <tr>
-            <td>Chest of Drawers</td>
-            <td><input type="text" id="chestToBePickedup" name=""></td>
-            <td><input type="text" id="chestPickedup" name=""></td>
-            <td><input type="text" id="chestwhyDeclined" name=""></td>
-        </tr>
-        <tr>
-            <td>Coffee Table</td>
-            <td><input type="text" id="coffeetableToBePickedup" name=""></td>
-            <td><input type="text" id="coffeetablePickedup" name=""></td>
-            <td><input type="text" id="coffeetablewhyDeclined" name=""></td>
-        </tr>
-        <tr>
-            <td>Couch(72 inches or less, no sleeper sofas/reclining couches)</td>
-            <td><input type="text" id="couchToBePickedup" name=""></td>
-            <td><input type="text" id="couchPickedup" name=""></td>
-            <td><input type="text" id="couchwhyDeclined" name=""></td>
-        </tr>
-        <tr>
-            <td>Desk/Desk Chair</td>
-            <td><input type="text" id="deskToBePickedup" name=""></td>
-            <td><input type="text" id="deskPickedup" name=""></td>
-            <td><input type="text" id="deskwhyDeclined" name=""></td>
-        </tr>
-        <tr>
-            <td>Dresser</td>
-            <td><input type="text" id="dresserToBePickedup" name=""></td>
-            <td><input type="text" id="dresserPickedup" name=""></td>
-            <td><input type="text" id="dresserwhyDeclined" name=""></td>
-        </tr>
-        <tr>
-            <td>End Table</td>
-            <td><input type="text" id="endtableToBePickedup" name=""></td>
-            <td><input type="text" id="endtablePickedup" name=""></td>
-            <td><input type="text" id="endtablewhyDeclined" name=""></td>
-        </tr>
-        <tr>
-            <td>Kitchen or dining room chairs</td>
-            <td><input type="text" id="kitchenchairsToBePickedup" name=""></td>
-            <td><input type="text" id="kitchenchairsPickedup" name=""></td>
-            <td><input type="text" id="kitchenchairswhyDeclined" name=""></td>
-        </tr>
-        <tr>
-            <td>Kitchen or dining room table</td>
-            <td><input type="text" id="kitchentableToBePickedup" name=""></td>
-            <td><input type="text" id="kitchentablePickedup" name=""></td>
-            <td><input type="text" id="kitchentablewhyDeclined" name=""></td>
-        </tr>
-        <tr>
-            <td>Kitchen or dining room items</td>
-            <td><input type="text" id="kitchenitemsToBePickedup" name=""></td>
-            <td><input type="text" id="kitchenitemsPickedup" name=""></td>
-            <td><input type="text" id="kitchenitemswhyDeclined" name=""></td>
-        </tr>
-        <tr>
-            <td>Linens</td>
-            <td><input type="text" id="linensToBePickedup" name=""></td>
-            <td><input type="text" id="linensPickedup" name=""></td>
-            <td><input type="text" id="linenswhyDeclined" name=""></td>
-        </tr>
-        <tr>
-            <td>Living room or upholstered chairs or recliner</td>
-            <td><input type="text" id="livingroomchairsToBePickedup" name=""></td>
-            <td><input type="text" id="livingroomchairsPickedup" name=""></td>
-            <td><input type="text" id="livingroomchairswhyDeclined" name=""></td>
-        </tr>
-        <tr>
-            <td>Loveseat</td>
-            <td><input type="text" id="loveseatToBePickedup" name=""></td>
-            <td><input type="text" id="loveseatPickedup" name=""></td>
-            <td><input type="text" id="loveseatwhyDeclined" name=""></td>
-        </tr>
-        <tr>
-            <td>Microwave</td>
-            <td><input type="text" id="microwaveToBePickedup" name=""></td>
-            <td><input type="text" id="microwavePickedup" name=""></td>
-            <td><input type="text" id="microwavewhyDeclined" name=""></td>
-        </tr>
-        <tr>
-            <td>Nightstand</td>
-            <td><input type="text" id="nightstandToBePickedup" name=""></td>
-            <td><input type="text" id="nightstandPickedup" name=""></td>
-            <td><input type="text" id="nightstandwhyDeclined" name=""></td>
-        </tr>
-        <tr>
-            <td>Small appliances</td>
-            <td><input type="text" id="smallappliancesoBePickedup" name=""></td>
-            <td><input type="text" id="smallappliancesPickedup" name=""></td>
-            <td><input type="text" id="smallapplianceswhyDeclined" name=""></td>
-        </tr>
-        <tr>
-            <td>Bookshelves</td>
-            <td><input type="text" id="bookshelvesToBePickedup" name=""></td>
-            <td><input type="text" id="bookshelvesPickedup" name=""></td>
-            <td><input type="text" id="bookshelveswhyDeclined" name=""></td>
-        </tr>
-        <tr>
-            <td>Other</td>
-            <td><input type="text" id="otherToBePickedup" name=""></td>
-            <td><input type="text" id="otherPickedup" name=""></td>
-            <td><input type="text" id="otherwhyDeclined" name=""></td>
-        </tr>
+        <p>**Our Drivers will wake final determination on acceptance of all items picked up**</p>
+        <table>
+            <tr>
+                <th>Furniture items: Please have the items clean and ready for pickup</th>
+                <th>#To be picked up</th>
+                <th># Picked up</th>
+                <th>Declined-Why</th>
+            </tr>
+            <tr>
+                <td>Bed Frames: twin, full, or queen</td>
+                <td><input type="text" id="bedToBePickedup" name=""></td>
+                <td><input type="text" id="bedPickedup" name=""></td>
+                <td><input type="text" id="bedwhyDeclined" name=""></td>
+            </tr>
+            <tr>
+                <td>Mattress and Box Spring: twin, full, or queen</td>
+                <td><input type="text" id="mattressToBePickedup" name=""></td>
+                <td><input type="text" id="mattressPickedup" name=""></td>
+                <td><input type="text" id="mattresswhyDeclined" name=""></td>
+            </tr>
+            <tr>
+                <td>Cart: kitchen, microwave, TV stand</td>
+                <td><input type="text" id="cartToBePickedup" name=""></td>
+                <td><input type="text" id="cartPickedup" name=""></td>
+                <td><input type="text" id="cartwhyDeclined" name=""></td>
+            </tr>
+            <tr>
+                <td>Chest of Drawers</td>
+                <td><input type="text" id="chestToBePickedup" name=""></td>
+                <td><input type="text" id="chestPickedup" name=""></td>
+                <td><input type="text" id="chestwhyDeclined" name=""></td>
+            </tr>
+            <tr>
+                <td>Coffee Table</td>
+                <td><input type="text" id="coffeetableToBePickedup" name=""></td>
+                <td><input type="text" id="coffeetablePickedup" name=""></td>
+                <td><input type="text" id="coffeetablewhyDeclined" name=""></td>
+            </tr>
+            <tr>
+                <td>Couch(72 inches or less, no sleeper sofas/reclining couches)</td>
+                <td><input type="text" id="couchToBePickedup" name=""></td>
+                <td><input type="text" id="couchPickedup" name=""></td>
+                <td><input type="text" id="couchwhyDeclined" name=""></td>
+            </tr>
+            <tr>
+                <td>Desk/Desk Chair</td>
+                <td><input type="text" id="deskToBePickedup" name=""></td>
+                <td><input type="text" id="deskPickedup" name=""></td>
+                <td><input type="text" id="deskwhyDeclined" name=""></td>
+            </tr>
+            <tr>
+                <td>Dresser</td>
+                <td><input type="text" id="dresserToBePickedup" name=""></td>
+                <td><input type="text" id="dresserPickedup" name=""></td>
+                <td><input type="text" id="dresserwhyDeclined" name=""></td>
+            </tr>
+            <tr>
+                <td>End Table</td>
+                <td><input type="text" id="endtableToBePickedup" name=""></td>
+                <td><input type="text" id="endtablePickedup" name=""></td>
+                <td><input type="text" id="endtablewhyDeclined" name=""></td>
+            </tr>
+            <tr>
+                <td>Kitchen or dining room chairs</td>
+                <td><input type="text" id="kitchenchairsToBePickedup" name=""></td>
+                <td><input type="text" id="kitchenchairsPickedup" name=""></td>
+                <td><input type="text" id="kitchenchairswhyDeclined" name=""></td>
+            </tr>
+            <tr>
+                <td>Kitchen or dining room table</td>
+                <td><input type="text" id="kitchentableToBePickedup" name=""></td>
+                <td><input type="text" id="kitchentablePickedup" name=""></td>
+                <td><input type="text" id="kitchentablewhyDeclined" name=""></td>
+            </tr>
+            <tr>
+                <td>Kitchen or dining room items</td>
+                <td><input type="text" id="kitchenitemsToBePickedup" name=""></td>
+                <td><input type="text" id="kitchenitemsPickedup" name=""></td>
+                <td><input type="text" id="kitchenitemswhyDeclined" name=""></td>
+            </tr>
+            <tr>
+                <td>Linens</td>
+                <td><input type="text" id="linensToBePickedup" name=""></td>
+                <td><input type="text" id="linensPickedup" name=""></td>
+                <td><input type="text" id="linenswhyDeclined" name=""></td>
+            </tr>
+            <tr>
+                <td>Living room or upholstered chairs or recliner</td>
+                <td><input type="text" id="livingroomchairsToBePickedup" name=""></td>
+                <td><input type="text" id="livingroomchairsPickedup" name=""></td>
+                <td><input type="text" id="livingroomchairswhyDeclined" name=""></td>
+            </tr>
+            <tr>
+                <td>Loveseat</td>
+                <td><input type="text" id="loveseatToBePickedup" name=""></td>
+                <td><input type="text" id="loveseatPickedup" name=""></td>
+                <td><input type="text" id="loveseatwhyDeclined" name=""></td>
+            </tr>
+            <tr>
+                <td>Microwave</td>
+                <td><input type="text" id="microwaveToBePickedup" name=""></td>
+                <td><input type="text" id="microwavePickedup" name=""></td>
+                <td><input type="text" id="microwavewhyDeclined" name=""></td>
+            </tr>
+            <tr>
+                <td>Nightstand</td>
+                <td><input type="text" id="nightstandToBePickedup" name=""></td>
+                <td><input type="text" id="nightstandPickedup" name=""></td>
+                <td><input type="text" id="nightstandwhyDeclined" name=""></td>
+            </tr>
+            <tr>
+                <td>Small appliances</td>
+                <td><input type="text" id="smallappliancesoBePickedup" name=""></td>
+                <td><input type="text" id="smallappliancesPickedup" name=""></td>
+                <td><input type="text" id="smallapplianceswhyDeclined" name=""></td>
+            </tr>
+            <tr>
+                <td>Bookshelves</td>
+                <td><input type="text" id="bookshelvesToBePickedup" name=""></td>
+                <td><input type="text" id="bookshelvesPickedup" name=""></td>
+                <td><input type="text" id="bookshelveswhyDeclined" name=""></td>
+            </tr>
+            <tr>
+                <td>Other</td>
+                <td><input type="text" id="otherToBePickedup" name=""></td>
+                <td><input type="text" id="otherPickedup" name=""></td>
+                <td><input type="text" id="otherwhyDeclined" name=""></td>
+            </tr>
 
-    </table>
-    <br><input type="submit" id="upload" value="Save">
+        </table>
+        <br><input type="submit" id="upload" value="Save">
+    </form>
+
 </div>
 </body>
 </html>
