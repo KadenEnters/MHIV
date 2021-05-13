@@ -1,11 +1,11 @@
 $(init);
 let config = {
-    apiKey: "AIzaSyBkfXvj4J3HzaufCBFIHMulfwbVkGh3VO0",
-    authDomain: "mhvi-82ea7.firebaseapp.com",
-    projectId: "mhvi-82ea7",
-    storageBucket: "mhvi-82ea7.appspot.com",
-    messagingSenderId: "54593296978",
-    appId: "1:54593296978:web:0e3bf1a1d15e5ff6281d8b"
+    apiKey: "AIzaSyBo5d4unLD61WSscuGztcMFcZMRE3MHV5g",
+    authDomain: "mhvi-e8bdb.firebaseapp.com",
+    projectId: "mhvi-e8bdb",
+    storageBucket: "mhvi-e8bdb.appspot.com",
+    messagingSenderId: "207439199201",
+    appId: "1:207439199201:web:c68d573c5367acb2fbb0a0"
 };
 firebase.initializeApp(config);
 db = firebase.firestore();
@@ -14,7 +14,7 @@ clientsRef.get().then((querySnapshot) => {
     console.log("Loaded Clients")
 });
 function init() {
-    $('#upload').on('click', addClient);
+    $('#upload').on('submit', addClient);
     $('#search').on('click', searchClient);
 }
 function LoadTable(querySnapshot) {
@@ -24,7 +24,6 @@ function LoadTable(querySnapshot) {
         tableRow += '<tr>';
         tableRow += '<td class="lname">' + document.LastName + ',</td>';
         tableRow += '<td class="fname">' + document.FirstName + '</td>';
-        tableRow += '<td>           </td>';
         tableRow += '<td><input type="button" id="edit" value="Edit"></td>';
         tableRow += '<td><input type="button" id="visit" value="Visit"></td>';
         tableRow += '<td><input type="button" id="service" value="Service"></td>';
@@ -33,7 +32,9 @@ function LoadTable(querySnapshot) {
     $('#tbody').html(tableRow);
 }
 function addClient() {
-    console.log("test")
+    event.preventDefault();
+    console.log("uploading")
+    let intakeDate = $('#intakeDate').val();
     let fname = $('#fname').val();
     let lname = $('#lname').val();
     let address = $('#address').val();
@@ -54,7 +55,9 @@ function addClient() {
     let timeofService = $('#TimeofService').val();
     let ActiveDutyTime = $('#ActiveDutyTime').val();
     let serviceVerification = $('#ServiceVerification').val();
+
     clientsRef.add({
+        IntakeDate: intakeDate,
         FirstName: fname,
         LastName: lname,
         LastName_lower: lname.toLowerCase(),
@@ -63,7 +66,7 @@ function addClient() {
         State: state,
         ZipCode: zipcode,
         IsHomeless: isHomeless,
-        Location: location,
+       // Location: location,
         PhoneNumber: phonenumber,
         Email: email,
         Gender: gender,
@@ -71,7 +74,7 @@ function addClient() {
         Ssn: ssn,
         Race: race,
         Income: income,
-        Income: incomeAmount,
+        IncomeAmount: incomeAmount,
         Branch: branch,
         TimeofService: timeofService,
         ActiveTime: ActiveDutyTime,
@@ -85,7 +88,6 @@ function addClient() {
 }
 
 function searchClient() {
-    console.log("test")
     let lName = $('#lastName').val().toLowerCase();
     clientsRef.where("LastName_lower", "==", lName)
         .get()
@@ -94,10 +96,69 @@ function searchClient() {
         });
 }
 
-// clientsRef.get().then((querySnapshot) => {
-//     LoadTable(querySnapshot);
-//     querySnapshot.forEach((doc) => {
-//         console.log(doc.id, " => ", doc.data());
-//     })
-// });
+clientsRef.get().then((querySnapshot) => {
+    LoadTable(querySnapshot);
+    querySnapshot.forEach((doc) => {
+        console.log(doc.id, " => ", doc.data());
+    })
+});
+
+$(document).ready(function(){
+    let today = new Date();
+    let date = today.getFullYear()+ '-' +(today.getMonth()+1)+ '-' +today.getDate()
+    let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds()
+    document.getElementById("intakeDate").innerHTML = date + ' ' + time;
+});
+
+function getReport() {
+    clientsRef.orderBy("intakeDate").limit(50);
+}
+
+function displayLocation() {
+    var x = document.getElementById("IsHomeless").value;
+    if (x=="Yes") {
+        $(".locationStuff").show();
+    } else if(x=="No") {
+        $(".locationStuff").hide();
+    }
+}
+
+function displayMaritalStatus() {
+    var x = document.getElementById("MaritalStatus").value;
+    if (x == "Married") {
+        $(".hasSpouse").show();
+    } else {
+        $(".hasSpouse").hide();
+        $(".hasSpousework").hide();
+    }
+}
+
+function displayEmploymentStatus() {
+    var x = document.getElementById("CurrentlyEmployed").value;
+    if (x == "EmployedYes") {
+        $(".hasJob").show();
+        $(".hasNoJob").hide();
+    } else {
+        $(".hasNoJob").show();
+        $(".hasJob").hide();
+    }
+}
+
+function displaySpouseWorkStatus() {
+    var x = document.getElementById("SpouseWork").value;
+    if (x == "SpouseWorkYes") {
+        $(".hasSpousework").show();
+    } else {
+        $(".hasSpousework").hide();
+    }
+}
+
+function displayActiveduty() {
+    var x = document.getElementById("ActiveDuty").value;
+    if (x == "ActiveDutyYes") {
+        $(".ActiveDutyTimeYes").show();
+    } else {
+        $(".ActiveDutyTimeYes").hide();
+    }
+}
 
