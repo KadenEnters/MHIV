@@ -24,9 +24,10 @@
 </header>
 <div id="form">
     <form>
-    <h4>Basic Information</h4><br>
-                <label for="CurrentDate">*Current Date:</label>
-                <input type="date" id="CurrentDate" name="CurrentDate" required="required">
+        <label><h3>Basic Information</h3></label><br>
+        <label>Intake Date:</label>
+
+        <label id="intakeDate"></label>
 
                 <label for="fname">*First Name:</label>
                 <input type="text" id="fname" name="First Name" required="required">
@@ -53,10 +54,10 @@
                 </select>
 
                 <label class="locationStuff" for="YesLocation">Where are you staying?:</label>
-                <input class="locationStuff" type="text" id="YesLocation" name="Location" value="N/A">
+                <input class="locationStuff" type="text" id="YesLocation" name="Location">
 
                 <label for="phonenumber">Phone#(no dashes):</label>
-                <input type="text" id="phonenumber" name="Phone#" maxlength="10" value="N/A">
+                <input type="text" id="phonenumber" name="Phone#" maxlength="10" >
 
                 <label for="email">Email Address:</label>
                 <input type="email" id="email" name="Email" value="N/A@email.com">
@@ -85,9 +86,9 @@
                 </select>
 
                 <label for="income">*Sources of Income:</label>
-                <input type="text" id="income" name="Income" required="required" value="N/A">
+                <input type="text" id="income" name="Income" required="required">
                 <label for="incomeAmount">*Amount of Income (List income per source):</label>
-                <input type="text" id="incomeAmount" name="Income Amount" required="required" value="N/A">
+                <input type="text" id="incomeAmount" name="Income Amount" required="required">
         <h4>Family Information</h4><br>
         <label for="MaritalStatus">*Marital Status</label>
         <select id="MaritalStatus" name="MaritalStatus" value="MaritalStatus" required="required" onchange="displayMaritalStatus()">
@@ -99,11 +100,10 @@
         </select>
 
         <label for="SpouseName" class="hasSpouse">Spouse's Name:</label>
-        <input type="text" class="hasSpouse" id="SpouseName" name="SpouseName" value="N/A" >
+        <input type="text" class="hasSpouse" id="SpouseName" name="SpouseName" >
 
         <label class="hasSpouse" for="SpouseService">Has he/she ever served in the millitary?</label>
         <select class="hasSpouse" id="SpouseService" name="SpouseService" value="SpouseService">
-            <option value="NoSpouse">N/A</option>
             <option value="SpouseYes">Yes(Complete a separate intake)</option>
             <option value="SpouseNo">No</option>
         </select>
@@ -113,7 +113,7 @@
 
         <label for="ChildrenResidence">With whom do the children reside with?</label>
         <select id="ChildrenResidence" name="ChildrenResidence" value="ChildrenResidence">
-            <option value="NoChildren">N/A</option>
+            <option value="NoChildren">No Children</option>
             <option value="Veteran">Veteran</option>
             <option class="hasSpouse" value="Spouse">Spouse</option>
             <option value="Both">Both</option>
@@ -133,7 +133,7 @@
                 </select>
 
                 <label for="TimeofService">*Time of Service:</label>
-                <input type="text" id="TimeofService" name="Time of Service" required="required"></input>
+                <input type="text" id="TimeofService" name="Time of Service" required="required" value="StartDate-EndDate" ></input>
 
         <label for="ActiveDuty">*Did you serve on active duty?</label>
         <select id="ActiveDuty" name="ActiveDuty" value="ActiveDuty" required="required" onchange="displayActiveduty()">
@@ -142,7 +142,7 @@
         </select>
 
         <label class="ActiveDutyTimeYes" for="ActiveDutyTime">List dates:</label>
-        <input class="ActiveDutyTimeYes" type="text" id="ActiveDutyTime" name="ActiveDuty" value="N/A"></input>
+        <input class="ActiveDutyTimeYes" type="text" id="ActiveDutyTime" name="ActiveDuty" value="StartDate-EndDate,StartDate-EndDate..."></input>
 
         <label for="Discharge">*Type of discharge:</label>
         <select id="Discharge" name="Discharge" value="Discharge" required="required">
@@ -163,29 +163,6 @@
                 </select>
 
     <h4>Employment</h4><br>
-        <label for="CurrentlyEmployed">*Are you currently employed?</label>
-        <select id="CurrentlyEmployed" name="CurrentlyEmployed" value="CurrentlyEmployed" required="required" onchange="displayEmploymentStatus()">
-            <option value="EmployedYes">Yes</option>
-            <option value="EmployedNo">No</option>
-        </select>
-
-        <label class="hasJob" for="EmployeePosition">What is your position:</label>
-        <input class="hasJob" type="text" id="EmployeePosition" name="EmployeePosition" value="N/A"></input>
-
-
-        <label class="hasJob" for="Employer">Employer:</label>
-        <input class="hasJob" type="text" id="Employer" name="Employer" value="N/A"></input>
-
-        <label class="hasJob" for="FullorPart">Full or part time?</label>
-        <select class="hasJob" id="FullorPart" name="FullorPart" value="FullorPart">
-            <option value="FullorPartNoJob">N/A</option>
-            <option value="FullorPartYes">Full Time</option>
-            <option value="FullorPartNo">Part Time</option>
-        </select>
-
-        <label class="hasNoJob" for="LastDateEmployed">When was the last date you were employed:</label>
-        <input type="date" id="LastDateEmployed" name="LastDateEmployed"></input>
-
         <label for="DriversLicence" >*Do you have a valid Drivers Licence?</label>
         <select id="DriversLicence" name="DriversLicence" value="DriversLicence" required="required">
             <option value="DriversLicenceYes">Yes</option>
@@ -205,15 +182,34 @@
         </select>
 
         <label class="hasSpousework" for="SpouseWorkPlace">Where do they work?:</label>
-        <input class="hasSpousework" type="text" id="SpouseWorkPlace" name="SpouseWorkPlace" value="N/A"></input>
+        <input class="hasSpousework" type="text" id="SpouseWorkPlace" name="SpouseWorkPlace"></input>
 
         <label class="hasSpousework" for="SpouseFullorPart">Full or part time?</label>
         <select class="hasSpousework" id="SpouseFullorPart" name="SpouseFullorPart" value="SpouseFullorPart">
-            <option value="SpouseFullorPartNoSpouse">N/A</option>
             <option value="SpouseFullorPartYes">Yes</option>
             <option value="SpouseFullorPartNo">No</option>
         </select>
 
+        <label for="CurrentlyEmployed">*Are you currently employed?</label>
+        <select id="CurrentlyEmployed" name="CurrentlyEmployed" value="CurrentlyEmployed" required="required" onchange="displayEmploymentStatus()">
+            <option value="EmployedYes">Yes</option>
+            <option value="EmployedNo">No</option>
+        </select>
+
+        <label class="hasNoJob" for="LastDateEmployed">When was the last date you were employed:</label>
+        <input type="date" id="LastDateEmployed" name="LastDateEmployed"></input>
+
+        <label class="hasJob" for="EmployeePosition">What is your position:</label>
+        <input class="hasJob" type="text" id="EmployeePosition" name="EmployeePosition"></input>
+
+        <label class="hasJob" for="Employer">Employer:</label>
+        <input class="hasJob" type="text" id="Employer" name="Employer"></input>
+
+        <label class="hasJob" for="FullorPart">Full or part time?</label>
+        <select class="hasJob" id="FullorPart" name="FullorPart" value="FullorPart">
+            <option value="FullorPartYes">Full Time</option>
+            <option value="FullorPartNo">Part Time</option>
+        </select>
 
             <br><input type="submit" id="upload" value="Save">
             </form>
