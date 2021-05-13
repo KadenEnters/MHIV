@@ -1,11 +1,11 @@
 $(init);
 let config = {
-    apiKey: "AIzaSyBkfXvj4J3HzaufCBFIHMulfwbVkGh3VO0",
-    authDomain: "mhvi-82ea7.firebaseapp.com",
-    projectId: "mhvi-82ea7",
-    storageBucket: "mhvi-82ea7.appspot.com",
-    messagingSenderId: "54593296978",
-    appId: "1:54593296978:web:0e3bf1a1d15e5ff6281d8b"
+    apiKey: "AIzaSyBo5d4unLD61WSscuGztcMFcZMRE3MHV5g",
+    authDomain: "mhvi-e8bdb.firebaseapp.com",
+    projectId: "mhvi-e8bdb",
+    storageBucket: "mhvi-e8bdb.appspot.com",
+    messagingSenderId: "207439199201",
+    appId: "1:207439199201:web:c68d573c5367acb2fbb0a0"
 };
 firebase.initializeApp(config);
 db = firebase.firestore();
